@@ -17,24 +17,16 @@ export function AppLayout({ children, currentPath = "" }) {
   // Example dynamic subtopics based on the active category
   const subTopics = {
     "/Fundamentos": [
-      { id: "unidades-de-informacion", label: "Unidades de información", path: "/Fundamentos/UnidadesDeInformacion", badge: "Nuevo" },
+      { id: "unidades-de-informacion", label: "Unidades de información", path: "/Fundamentos/UnidadesDeInformacion" },
     ],
     "/DesarrolloVideoJuegos": [
-      { id: "conceptos-unity", label: "Conceptos Unity", path: "/DesarrolloVideoJuegos/ConceptosUnity" },
-      { id: "matematicas-3d", label: "Matemáticas 3D", path: "/DesarrolloVideoJuegos/Matematicas3D" },
-    ],
-    "/CienciaDeDatos": [
-      { id: "machine-learning", label: "Machine Learning", path: "/CienciaDeDatos/MachineLearning" },
-      { id: "estadistica", label: "Estadística", path: "/CienciaDeDatos/Estadistica" },
+      { id: "conceptos-unity", label: "Conceptos Unity", path: "/DesarrolloVideoJuegos" },
     ],
     "/Redes": [
-      { id: "tipos-de-ip", label: "Tipos de IP", path: "/Redes/TiposDeIP", badge: "Nuevo" },
-      { id: "mascara-gateway", label: "Máscara y gateway", path: "/Redes/MascaraGateway", badge: "Nuevo" },
-      { id: "interfaces-de-red", label: "Interfaces de red", path: "/Redes/InterfacesDeRed", badge: "Nuevo" },
-      { id: "calculo-de-redes", label: "Cálculo de redes", path: "/Redes/CalculoDeRedes", badge: "Nuevo" },
-      { id: "modelo-osi", label: "Modelo OSI", path: "/Redes/ModeloOSI" },
-      { id: "tcp-ip", label: "TCP/IP", path: "/Redes/TCPIP" },
-      { id: "subnetting-cidr", label: "Subnetting y CIDR", path: "/Redes/Subnetting" },
+      { id: "tipos-de-ip", label: "Tipos de IP", path: "/Redes/TiposDeIP" },
+      { id: "mascara-gateway", label: "Máscara y gateway", path: "/Redes/MascaraGateway" },
+      { id: "interfaces-de-red", label: "Interfaces de red", path: "/Redes/InterfacesDeRed" },
+      { id: "calculo-de-redes", label: "Cálculo de redes", path: "/Redes/CalculoDeRedes" },
     ]
   };
 
