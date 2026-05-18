@@ -1,0 +1,26 @@
+---
+import '../styles/global.css';
+import { AppLayout } from '../components/AppLayout.jsx';
+import BaseHead from '../components/BaseHead.astro';
+const currentPath = Astro.url.pathname;
+---
+<!doctype html>
+<html lang="es" class="dark">
+	<head>
+		<BaseHead title="Apuntes de Oli" description="Plataforma de apuntes universitarios de informática." />
+	</head>
+	<body class="min-h-screen">
+		<AppLayout client:load currentPath={currentPath}>
+			<slot />
+		</AppLayout>
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>

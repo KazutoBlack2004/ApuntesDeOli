@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+@theme inline {
+  /* Pink Primary */
+  --color-primary: oklch(0.65 0.25 340);
+  --color-primary-foreground: #ffffff;
+  
+  /* Pink variants */
+  --color-primary-hover: oklch(0.6 0.2 340);
+  --color-primary-50: oklch(0.95 0.05 340);
+  --color-primary-100: oklch(0.9 0.1 340);
+  --color-primary-200: oklch(0.8 0.15 340);
+  --color-primary-300: oklch(0.7 0.2 340);
+  --color-primary-400: oklch(0.65 0.25 340);
+  --color-primary-500: oklch(0.6 0.2 340);
+  
+  /* Black Background Theme overrides for HeroUI */
+  --color-background: #050505;
+  --color-foreground: #f3f4f6;
+  
+  --color-content1: #0a0a0a;
+  --color-content2: #121212;
+  --color-content3: #1a1a1a;
+  --color-content4: #222222;
+}
+
+/* Custom Scrollbar for the dark pink aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(236, 72, 153, 0.2);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(236, 72, 153, 0.5);
+}

@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CategoryLanding from '../../components/CategoryLanding.jsx';
+---
+
+<Layout>
+  <CategoryLanding
+    client:load
+    category="bases-de-datos"
+    title="Bases de Datos"
+    description="SQL, NoSQL, optimización de queries, modelado y normalización."
+    icon="Database"
+    topics={[
+      { label: "Optimización SQL", path: "/BasesDeDatos/OptimizacionSQL" },
+      { label: "Modelado Relacional", path: "/BasesDeDatos/ModeladoRelacional" },
+      { label: "NoSQL & MongoDB", path: "/BasesDeDatos/NoSQL" },
+    ]}
+  />
+</Layout>

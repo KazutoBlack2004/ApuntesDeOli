@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CategoryLanding from '../../components/CategoryLanding.jsx';
+---
+
+<Layout>
+  <CategoryLanding
+    client:load
+    category="ciencia-de-datos"
+    title="Ciencia de Datos"
+    description="Machine Learning, estadística, análisis de datos y visualización."
+    icon="BookOpen"
+    topics={[
+      { label: "Machine Learning", path: "/CienciaDeDatos/MachineLearning" },
+      { label: "Análisis Estadístico", path: "/CienciaDeDatos/AnalisisEstadistico" },
+      { label: "Pandas & NumPy", path: "/CienciaDeDatos/Pandas" },
+    ]}
+  />
+</Layout>

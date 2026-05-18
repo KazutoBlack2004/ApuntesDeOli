@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Button } from "@heroui/react";
+import { BookOpen, Rocket, Sparkles } from "lucide-react";
+---
+
+<Layout>
+	<div class="flex flex-col items-center justify-center min-h-[70vh] text-center gap-6 animate-fade-in">
+		<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-400 text-sm font-medium mb-4 shadow-[0_0_15px_rgba(236,72,153,0.15)]">
+			<Sparkles size={16} /> Bienvenid@ a mi bóveda de conocimiento
+		</div>
+		
+		<h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white via-white/90 to-pink-500/80 mb-2">
+			Apuntes de <span class="text-pink-500">Oli</span>
+		</h1>
+		
+		<p class="text-lg md:text-xl text-white/60 max-w-2xl mx-auto leading-relaxed">
+			Explora mis notas estructuradas, algoritmos y documentación de toda la carrera de Informática. Elige una categoría en el menú superior para comenzar a leer.
+		</p>
+		
+		<div class="flex gap-4 mt-8">
+			<Button variant="primary" href="/DesarrolloSoftware" className="font-bold tracking-wide shadow-[0_0_20px_rgba(236,72,153,0.3)]">
+				<BookOpen size={18} className="mr-2" />
+				Ver Apuntes
+			</Button>
+			<Button variant="outline" href="/DesarrolloVideoJuegos" className="text-white border-white/20 hover:border-pink-500/50">
+				<Rocket size={18} className="mr-2" />
+				Explorar Unity
+			</Button>
+		</div>
+	</div>
+
+	<style>
+		.animate-fade-in {
+			animation: fadeIn 0.8s ease-out forwards;
+		}
+		@keyframes fadeIn {
+			from { opacity: 0; transform: translateY(10px); }
+			to { opacity: 1; transform: translateY(0); }
+		}
+	</style>
+</Layout>
