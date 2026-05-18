@@ -4,10 +4,15 @@ import React from "react";
 import { Header, mainCategories } from "./Navigation/Header.jsx";
 import { Sidebar } from "./Navigation/Sidebar.jsx";
 import { Footer } from "./Navigation/Footer.jsx";
+import { resolvePath } from "../utils/path.js";
 
 export function AppLayout({ children, currentPath = "" }) {
   // Determine which category is active based on the URL path
-  const activeCategory = mainCategories.find(c => currentPath.startsWith(c.path));
+  const activeCategory = mainCategories.find(c => {
+    const resolvedPath = resolvePath(c.path);
+    // Exact match or subpath match
+    return currentPath === resolvedPath || currentPath.startsWith(resolvedPath + "/");
+  });
 
   // Example dynamic subtopics based on the active category
   const subTopics = {

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Button } from "@heroui/react";
 import { ChevronLeft, ChevronRight, Menu } from "lucide-react";
+import { resolvePath } from "../../utils/path.js";
+
 
 export function Sidebar({ activeCategory, activeSubTopics, currentPath }) {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -11,7 +13,8 @@ export function Sidebar({ activeCategory, activeSubTopics, currentPath }) {
   const renderLinks = (collapsed = isCollapsed) => (
     <div className="flex flex-col gap-1">
       {activeSubTopics.map((sub) => {
-        const isActive = currentPath === sub.path || currentPath.startsWith(`${sub.path}/`);
+        const resolvedSubPath = resolvePath(sub.path);
+        const isActive = currentPath === resolvedSubPath || currentPath.startsWith(`${resolvedSubPath}/`);
         return (
           <Button
             key={sub.id}
@@ -25,7 +28,7 @@ export function Sidebar({ activeCategory, activeSubTopics, currentPath }) {
                 ? "font-semibold text-pink-400 bg-pink-500/10 border border-pink-500/20"
                 : "text-white/60 hover:text-pink-300 hover:bg-pink-500/5"
             }`}
-            onPress={() => window.location.href = sub.path}
+            onPress={() => window.location.href = resolvedSubPath}
           >
             <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-current" />
             {!collapsed && <span className="truncate">{sub.label}</span>}

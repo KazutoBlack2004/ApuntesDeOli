@@ -1,6 +1,8 @@
 import React from "react";
 import { Chip } from "@heroui/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { resolvePath } from "../utils/path.js";
+
 
 /**
  * NoteLayout — Template base para todos los apuntes del portafolio.
@@ -28,9 +30,9 @@ export default function NoteLayout({
 
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-white/30 mb-6">
-        <a href="/" className="hover:text-pink-400 transition-colors">Inicio</a>
+        <a href={resolvePath("/")} className="hover:text-pink-400 transition-colors">Inicio</a>
         <ChevronRight size={14} />
-        <a href={categoryPath} className="hover:text-pink-400 transition-colors">{category}</a>
+        <a href={resolvePath(categoryPath)} className="hover:text-pink-400 transition-colors">{category}</a>
         <ChevronRight size={14} />
         <span className="text-white/60 truncate">{title}</span>
       </nav>
@@ -62,7 +64,7 @@ export default function NoteLayout({
         <nav className="mt-12 grid gap-3 border-t border-white/10 pt-6 md:grid-cols-2">
           {previousNote ? (
             <a
-              href={previousNote.path}
+              href={resolvePath(previousNote.path)}
               className="group flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 text-white/70 transition-colors hover:border-pink-500/30 hover:bg-pink-500/10 hover:text-pink-200"
             >
               <ChevronLeft size={18} className="shrink-0 text-pink-400" />
@@ -79,7 +81,7 @@ export default function NoteLayout({
 
           {nextNote && (
             <a
-              href={nextNote.path}
+              href={resolvePath(nextNote.path)}
               className="group flex items-center justify-between gap-3 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 text-white/70 transition-colors hover:border-pink-500/30 hover:bg-pink-500/10 hover:text-pink-200 md:text-right"
             >
               <span>

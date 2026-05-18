@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, Button } from "@heroui/react";
 import { ArrowRight, BookOpen, Code, Database, Network, Gamepad2 } from "lucide-react";
+import { resolvePath } from "../utils/path.js";
+
 
 const iconMap = {
   BookOpen, Code, Database, Network, Gamepad2,
@@ -42,7 +44,7 @@ export default function CategoryLanding({ category, title, description, icon, to
       {topics.length > 0 ? (
         <div className="grid gap-3">
           {topics.map((topic, i) => (
-            <a key={i} href={topic.path} className="group block no-underline">
+            <a key={i} href={resolvePath(topic.path)} className="group block no-underline">
               <Card
                 className="border border-white/5 bg-white/[0.03] hover:bg-white/[0.06] transition-all duration-200 cursor-pointer"
                 style={{ "--hover-glow": colors.glow }}

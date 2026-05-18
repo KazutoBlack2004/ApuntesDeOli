@@ -8,7 +8,7 @@ export default function ConceptosUnity() {
         <p className="text-white/60 text-lg">Un resumen de los componentes principales para el desarrollo en Unity.</p>
       </div>
 
-      <Divider className="my-2 bg-white/10" />
+      <div className="my-2 h-px bg-white/10 w-full" />
 
       <div className="grid grid-cols-1 gap-6">
         <Card className="bg-white/5 border border-white/10" shadow="sm">
@@ -18,7 +18,7 @@ export default function ConceptosUnity() {
               <p className="text-small text-default-500">La entidad fundamental</p>
             </div>
             </Card.Header>
-          <Divider className="bg-white/10" />
+          <div className="h-px bg-white/10 w-full" />
           <Card.Content>
             <p className="text-white/80 leading-relaxed">
               Todo en tu juego es un GameObject, desde los personajes y luces hasta las cámaras y efectos especiales. Sin embargo, un GameObject por sí solo no hace nada; necesita <strong>Componentes</strong> para darle propiedades y comportamientos.
@@ -33,7 +33,7 @@ export default function ConceptosUnity() {
               <p className="text-small text-default-500">Scripting en C#</p>
             </div>
             </Card.Header>
-          <Divider className="bg-white/10" />
+          <div className="h-px bg-white/10 w-full" />
           <Card.Content>
             <p className="text-white/80 leading-relaxed">
               La clase base de la cual derivan todos los scripts de Unity. Proporciona métodos de ciclo de vida esenciales como <code>Start()</code>, <code>Update()</code> y <code>FixedUpdate()</code>.
@@ -61,7 +61,7 @@ export default function ConceptosUnity() {
               <p className="text-small text-default-500">Reusabilidad</p>
             </div>
             </Card.Header>
-          <Divider className="bg-white/10" />
+          <div className="h-px bg-white/10 w-full" />
           <Card.Content>
             <p className="text-white/80 leading-relaxed">
               El sistema de Prefabs te permite crear, configurar y almacenar un GameObject completo con todos sus componentes, valores de propiedades y GameObjects hijos como un Asset reutilizable.

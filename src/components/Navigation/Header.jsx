@@ -1,6 +1,8 @@
 import React from "react";
 import { Button, Link } from "@heroui/react";
 import { BookOpen, Code, Database, Network, Gamepad2 } from "lucide-react";
+import { resolvePath } from "../../utils/path.js";
+
 
 export const mainCategories = [
   { id: "fundamentos", label: "Fundamentos", path: "/Fundamentos", icon: BookOpen },
@@ -30,7 +32,7 @@ export function Header({ activeCategory }) {
               variant={isActive ? "primary" : "ghost"}
               size="sm"
               className={`text-sm font-medium transition-all ${isActive ? "shadow-[0_0_10px_rgba(236,72,153,0.3)]" : "text-white/70 hover:text-pink-300"}`}
-              onPress={() => window.location.href = cat.path}
+              onPress={() => window.location.href = resolvePath(cat.path)}
             >
               <Icon size={16} className="mr-2" />
               {cat.label}
