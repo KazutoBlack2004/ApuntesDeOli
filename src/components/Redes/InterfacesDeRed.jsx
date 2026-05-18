@@ -1,5 +1,6 @@
 import React from "react";
 import NoteLayout from "../NoteLayout.jsx";
+import Term from "../Term.jsx";
 
 export default function InterfacesDeRed() {
   return (
@@ -13,43 +14,43 @@ export default function InterfacesDeRed() {
         path: "/Redes/MascaraGateway",
       }}
       nextNote={{
-        label: "Cálculo de redes",
-        path: "/Redes/CalculoDeRedes",
+        label: "Modelos de red",
+        path: "/Redes/ModelosRedes",
       }}
     >
       <div className="callout">
-        Una interfaz de red es el punto por donde un dispositivo se conecta a
-        una red. Puede ser física, como un puerto Ethernet, o lógica, como una
+        Una <strong><Term id="nic">interfaz de red</Term></strong> es el punto por donde un dispositivo se conecta a
+        una red. Puede ser física, como un puerto <Term id="ethernet">Ethernet</Term> (tarjeta <Term id="nic">NIC</Term>), o lógica, como una
         interfaz virtual configurada por software.
       </div>
 
       <h2>Qué es una interfaz de red</h2>
       <p>
-        Una <strong>interfaz de red</strong> permite que un equipo envíe y
-        reciba datos. En computadores, switches y routers, normalmente se
+        Una <strong><Term id="nic">interfaz de red</Term></strong> permite que un equipo envíe y
+        reciba datos. En computadores, <Term id="switch">switches</Term> y <Term id="router">routers</Term>, normalmente se
         identifica como un puerto o adaptador de red.
       </p>
 
       <p>
-        Cada interfaz puede tener su propia configuración, como dirección IP,
-        máscara de red, gateway, velocidad y estado de conexión.
+        Cada interfaz puede tener su propia configuración, como dirección <Term id="ip">IP</Term>,
+        máscara de red, <Term id="gateway">gateway</Term>, velocidad y estado de conexión.
       </p>
 
       <h2>Ethernet</h2>
       <p>
-        <strong>Ethernet</strong> es una tecnología de red cableada muy común.
+        <strong><Term id="ethernet">Ethernet</Term></strong> es una tecnología de red cableada muy común.
         Utiliza cables de red, normalmente con conector RJ45, para conectar
         dispositivos dentro de una red local.
       </p>
 
       <p>
-        Ethernet trabaja con tramas, direcciones MAC y reglas de transmisión
+        <Term id="ethernet">Ethernet</Term> trabaja con tramas, <Term id="mac">direcciones MAC</Term> y reglas de transmisión
         que permiten mover datos entre dispositivos conectados a la misma red.
       </p>
 
       <h2>Fast Ethernet</h2>
       <p>
-        <strong>Fast Ethernet</strong> es una evolución de Ethernet que alcanza
+        <strong>Fast Ethernet</strong> es una evolución de <Term id="ethernet">Ethernet</Term> que alcanza
         velocidades de hasta <code>100 Mbps</code>. Fue muy usada en redes
         domésticas, laboratorios y oficinas.
       </p>
@@ -58,7 +59,7 @@ export default function InterfacesDeRed() {
       <p>
         <strong>Gigabit Ethernet</strong> alcanza velocidades de hasta{" "}
         <code>1 Gbps</code>, es decir, 1000 Mbps. Actualmente es común en
-        computadores, routers, switches y redes locales modernas.
+        computadores, <Term id="router">routers</Term>, <Term id="switch">switches</Term> y redes locales modernas.
       </p>
 
       <table>
@@ -90,12 +91,12 @@ export default function InterfacesDeRed() {
 
       <h2>Interfaces en equipos de red</h2>
       <p>
-        En routers y switches, las interfaces suelen nombrarse según el tipo y
+        En <Term id="router">routers</Term> y <Term id="switch">switches</Term>, las interfaces suelen nombrarse según el tipo y
         la posición del puerto. Por ejemplo:
       </p>
 
       <ul>
-        <li><code>Ethernet0/0</code>: interfaz Ethernet.</li>
+        <li><code>Ethernet0/0</code>: interfaz <Term id="ethernet">Ethernet</Term>.</li>
         <li><code>FastEthernet0/1</code>: interfaz Fast Ethernet.</li>
         <li><code>GigabitEthernet0/0</code>: interfaz Gigabit Ethernet.</li>
       </ul>
@@ -117,9 +118,9 @@ IP:       192.168.1.1
 Máscara:  255.255.255.0`}</code></pre>
 
       <div className="callout">
-        Después de conocer IP, máscara, gateway e interfaces, el siguiente paso
-        natural es aprender a calcular redes: dirección de red, broadcast,
-        cantidad de hosts y rangos utilizables.
+        Después de conocer <Term id="ip">IP</Term>, máscara, <Term id="gateway">gateway</Term> e interfaces, el siguiente paso
+        natural es comprender cómo estructuramos y organizamos las conversaciones entre dispositivos mediante
+        los <strong>modelos de red (OSI y TCP/IP)</strong>.
       </div>
     </NoteLayout>
   );

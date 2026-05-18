@@ -1,5 +1,6 @@
 import React from "react";
 import NoteLayout from "../NoteLayout.jsx";
+import Term from "../Term.jsx";
 
 export default function CalculoDeRedes() {
   return (
@@ -9,19 +10,23 @@ export default function CalculoDeRedes() {
       categoryPath="/Redes"
       tags={["Subnetting", "CIDR", "VLSM", "Clases IPv4"]}
       previousNote={{
-        label: "Interfaces de red",
-        path: "/Redes/InterfacesDeRed",
+        label: "Dispositivos y Protocolos",
+        path: "/Redes/ProtocolosDispositivos",
+      }}
+      nextNote={{
+        label: "VLANs y Enrutamiento",
+        path: "/Redes/VlansEnrutamiento",
       }}
     >
       <div className="callout">
-        En esta sección se trabajan las bases para calcular redes: clases IPv4,
-        subredes, cantidad de hosts, rangos utilizables, broadcast y VLSM.
+        En esta sección se trabajan las bases para calcular redes: clases <Term id="ip">IPv4</Term>,
+        <Term id="subred">subredes</Term>, cantidad de hosts, rangos utilizables, <Term id="broadcast">broadcast</Term> y <Term id="vlsm">VLSM</Term>.
       </div>
 
-      <h2>Clases de direcciones IPv4</h2>
+      <h2>Clases de direcciones <Term id="ip">IPv4</Term></h2>
       <p>
-        Antes de CIDR, las direcciones IPv4 se organizaban por clases. La clase
-        se reconoce mirando el primer octeto de la dirección IP.
+        Antes de <Term id="cidr">CIDR</Term>, las direcciones <Term id="ip">IPv4</Term> se organizaban por clases. La clase
+        se reconoce mirando el primer <Term id="octeto">octeto</Term> de la dirección <Term id="ip">IP</Term>.
       </p>
 
       <table>
@@ -84,14 +89,14 @@ export default function CalculoDeRedes() {
 
       <h2>Qué es una subred</h2>
       <p>
-        Una <strong>subred</strong> es una división más pequeña de una red
+        Una <strong><Term id="subred">subred</Term></strong> es una división más pequeña de una red
         principal. Subdividir una red permite organizar mejor los dispositivos y
         controlar cómo circula el tráfico.
       </p>
 
       <p>
         Por ejemplo, una red <code>192.168.1.0/24</code> se puede dividir en
-        varias subredes más pequeñas para separar áreas como administración,
+        varias <Term id="subred">subredes</Term> más pequeñas para separar áreas como administración,
         estudiantes, servidores o invitados.
       </p>
 
@@ -100,14 +105,14 @@ export default function CalculoDeRedes() {
         <li>Mejor organización de los equipos por área o función.</li>
         <li>Menos tráfico innecesario dentro de cada segmento.</li>
         <li>Mayor control de seguridad entre grupos de dispositivos.</li>
-        <li>Uso más eficiente de las direcciones IP disponibles.</li>
+        <li>Uso más eficiente de las direcciones <Term id="ip">IP</Term> disponibles.</li>
         <li>Facilita el diagnóstico de problemas de conectividad.</li>
       </ul>
 
       <h2>Qué calcularemos</h2>
       <ul>
         <li>Dirección de red.</li>
-        <li>Dirección de broadcast.</li>
+        <li>Dirección de <Term id="broadcast">broadcast</Term>.</li>
         <li>Primer host utilizable.</li>
         <li>Último host utilizable.</li>
         <li>Cantidad de hosts disponibles.</li>
@@ -129,15 +134,15 @@ Hosts:     192.168.1.1 - 192.168.1.254`}</code></pre>
 
       <h2>FLSM y VLSM</h2>
       <p>
-        <strong>FLSM</strong> significa máscara de subred de longitud fija. En
-        esta técnica, todas las subredes usan el mismo tamaño, aunque algunas
+        <strong><Term id="flsm">FLSM</Term></strong> significa máscara de subred de longitud fija. En
+        esta técnica, todas las <Term id="subred">subredes</Term> usan el mismo tamaño, aunque algunas
         necesiten muchos hosts y otras muy pocos.
       </p>
 
       <p>
-        <strong>VLSM</strong> significa máscara de subred de longitud variable.
-        Esta técnica permite crear subredes de distintos tamaños dentro de una
-        misma red principal, ajustando cada subred a la cantidad real de hosts
+        <strong><Term id="vlsm">VLSM</Term></strong> significa máscara de subred de longitud variable.
+        Esta técnica permite crear <Term id="subred">subredes</Term> de distintos tamaños dentro de una
+        misma red principal, ajustando cada <Term id="subred">subred</Term> a la cantidad real de hosts
         que necesita.
       </p>
 

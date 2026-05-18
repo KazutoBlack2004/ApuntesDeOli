@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Button } from "@heroui/react";
 import { BookOpen, Rocket, Sparkles } from "lucide-react";
 import { resolvePath } from '../utils/path.js';
 ---
@@ -20,14 +19,14 @@ import { resolvePath } from '../utils/path.js';
 		</p>
 		
 		<div class="flex gap-4 mt-8">
-			<Button variant="primary" href={resolvePath("/DesarrolloSoftware")} className="font-bold tracking-wide shadow-[0_0_20px_rgba(236,72,153,0.3)]">
+			<a href={resolvePath("/DesarrolloSoftware")} class="inline-flex items-center rounded-lg bg-pink-500 px-4 py-2 text-sm font-bold tracking-wide text-white shadow-[0_0_20px_rgba(236,72,153,0.3)] transition-colors hover:bg-pink-600">
 				<BookOpen size={18} className="mr-2" />
 				Ver Apuntes
-			</Button>
-			<Button variant="outline" href={resolvePath("/DesarrolloVideoJuegos")} className="text-white border-white/20 hover:border-pink-500/50">
+			</a>
+			<a href={resolvePath("/DesarrolloVideoJuegos")} class="inline-flex items-center rounded-lg border border-white/20 px-4 py-2 text-sm font-semibold text-white transition-colors hover:border-pink-500/50 hover:bg-white/5">
 				<Rocket size={18} className="mr-2" />
 				Explorar Unity
-			</Button>
+			</a>
 		</div>
 	</div>
 

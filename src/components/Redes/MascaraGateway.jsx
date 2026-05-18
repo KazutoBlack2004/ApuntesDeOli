@@ -1,5 +1,6 @@
 import React from "react";
 import NoteLayout from "../NoteLayout.jsx";
+import Term from "../Term.jsx";
 
 export default function MascaraGateway() {
   return (
@@ -18,21 +19,21 @@ export default function MascaraGateway() {
       }}
     >
       <div className="callout">
-        Después de conocer el formato de una IP, el siguiente paso es entender
-        cómo un equipo sabe si una dirección está dentro de su misma red o si
+        Después de conocer el formato de una <Term id="ip">IP</Term>, el siguiente paso es entender
+        cómo un equipo sabe si una dirección está dentro de su misma <Term id="subred">red</Term> o si
         debe enviar el tráfico hacia otra red.
       </div>
 
       <h2>Máscara de red</h2>
       <p>
         La <strong>máscara de red</strong> sirve para separar qué parte de una
-        dirección IP identifica a la red y qué parte identifica al dispositivo
+        dirección <Term id="ip">IP</Term> identifica a la <Term id="subred">red</Term> y qué parte identifica al dispositivo
         dentro de esa red.
       </p>
 
       <p>
-        Por ejemplo, si tenemos la IP <code>192.168.1.10</code> con la máscara{" "}
-        <code>255.255.255.0</code>, los primeros tres octetos representan la red
+        Por ejemplo, si tenemos la <Term id="ip">IP</Term> <code>192.168.1.10</code> con la máscara{" "}
+        <code>255.255.255.0</code>, los primeros tres <Term id="octeto">octetos</Term> representan la <Term id="subred">red</Term>{" "}
         y el último octeto representa al dispositivo.
       </p>
 
@@ -50,19 +51,19 @@ export default function MascaraGateway() {
 
       <h3>Notación CIDR</h3>
       <p>
-        También es común escribir la máscara usando notación CIDR. Por ejemplo,{" "}
-        <code>192.168.1.10/24</code> significa que los primeros 24 bits
+        También es común escribir la máscara usando <Term id="cidr">notación CIDR</Term>. Por ejemplo,{" "}
+        <code>192.168.1.10/24</code> significa que los primeros 24 <Term id="bit">bits</Term>{" "}
         pertenecen a la red. Para ver ejemplos de las diferentes máscaras
-        CIDR, <a href="https://www.ibm.com/docs/es/networkmanager/4.2.0?topic=tables-cidrinfo" target="_blank" rel="noopener noreferrer">
+        <Term id="cidr">CIDR</Term>, <a href="https://www.ibm.com/docs/es/networkmanager/4.2.0?topic=tables-cidrinfo" target="_blank" rel="noopener noreferrer">
           <span className="text-fuchsia-500 hover:text-fuchsia-800 underline">clic aquí</span>
         </a>
       </p>
 
       <h3>Máscara más grande y más pequeña</h3>
       <p>
-        En IPv4, la máscara se puede expresar desde <code>/0</code> hasta{" "}
-        <code>/32</code>. Mientras más grande es el número de la máscara, más
-        bits se reservan para identificar la red y menos direcciones quedan
+        En <Term id="ip">IPv4</Term>, la máscara se puede expresar desde <code>/0</code> hasta{" "}
+        <code>/32</code>. Mientras más grande es el número de la máscara, más{" "}
+        <Term id="bit">bits</Term> se reservan para identificar la red y menos direcciones quedan
         disponibles para dispositivos.
       </p>
 
@@ -75,7 +76,7 @@ export default function MascaraGateway() {
       <ul>
         <li>
           <code>255.0.0.0</code>, o <code>/8</code>, es una máscara grande en
-          cantidad de direcciones disponibles, porque deja muchos bits para
+          cantidad de direcciones disponibles, porque deja muchos <Term id="bit">bits</Term> para
           hosts.
         </li>
         <li>
@@ -91,7 +92,7 @@ export default function MascaraGateway() {
         </li>
         <li>
           <code>/32</code> es la máscara más grande: representa una sola
-          dirección IP.
+          dirección <Term id="ip">IP</Term>.
         </li>
       </ul>
 
@@ -105,7 +106,7 @@ Máscara /30
 
       <p>
         Por eso, cuando se busca una red pequeña pero todavía usable con la
-        regla clásica de reservar red y broadcast, se usa <code>/30</code>. Sus
+        regla clásica de reservar red y <Term id="broadcast">broadcast</Term>, se usa <code>/30</code>. Sus
         4 direcciones se dividen así:
       </p>
 
@@ -118,8 +119,8 @@ Broadcast:         192.168.1.3`}</code></pre>
 
       <p>
         Un ejemplo común es una red <code>/24</code>. En este caso, los primeros
-        24 bits identifican la red y quedan 8 bits para direcciones dentro de
-        esa red. Con 8 bits se pueden formar <code>256</code> combinaciones,
+        24 <Term id="bit">bits</Term> identifican la red y quedan 8 <Term id="bit">bits</Term> para direcciones dentro de
+        esa red. Con 8 <Term id="bit">bits</Term> se pueden formar <code>256</code> combinaciones,
         desde <code>0</code> hasta <code>255</code>.
       </p>
 
@@ -140,7 +141,7 @@ Broadcast:        192.168.1.255`}</code></pre>
           <code>192.168.1.0</code>.
         </li>
         <li>
-          La última dirección se usa como broadcast, por ejemplo{" "}
+          La última dirección se usa como <Term id="broadcast">broadcast</Term>, por ejemplo{" "}
           <code>192.168.1.255</code>.
         </li>
       </ul>
@@ -152,15 +153,15 @@ Broadcast:        192.168.1.255`}</code></pre>
 
       <h2>Gateway</h2>
       <p>
-        La <strong>gateway</strong>, o puerta de enlace, es el dispositivo que
-        permite salir de la red local hacia otras redes. Normalmente es el
-        router.
+        La <strong><Term id="gateway">gateway</Term></strong>, o <Term id="gateway">puerta de enlace</Term>, es el dispositivo que
+        permite salir de la red local hacia otras redes. Normalmente es el{" "}
+        <Term id="router">router</Term>.
       </p>
 
       <p>
         Si un computador quiere comunicarse con otro equipo dentro de la misma
         red, puede hacerlo directamente. Pero si quiere llegar a una dirección
-        externa, como un servidor en internet, envía el tráfico a la gateway.
+        externa, como un servidor en internet, envía el tráfico a la <Term id="gateway">gateway</Term>.
       </p>
 
       <pre><code>{`Equipo:   192.168.1.10
@@ -168,7 +169,7 @@ Máscara:  255.255.255.0
 Gateway:  192.168.1.1`}</code></pre>
 
       <p>
-        En este ejemplo, <code>192.168.1.1</code> suele ser el router. El equipo
+        En este ejemplo, <code>192.168.1.1</code> suele ser el <Term id="router">router</Term>. El equipo
         lo usa como salida cuando el destino no pertenece a su red local.
       </p>
     </NoteLayout>

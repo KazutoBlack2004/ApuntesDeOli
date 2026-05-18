@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Chip } from "@heroui/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { resolvePath } from "../utils/path.js";
@@ -25,6 +25,31 @@ export default function NoteLayout({
   nextNote,
   children,
 }) {
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      // Evitar navegación si el usuario está escribiendo en un input, textarea o elemento editable
+      if (
+        document.activeElement &&
+        (document.activeElement.tagName === "INPUT" ||
+          document.activeElement.tagName === "TEXTAREA" ||
+          document.activeElement.isContentEditable)
+      ) {
+        return;
+      }
+
+      if (event.key === "ArrowLeft" && previousNote) {
+        window.location.href = resolvePath(previousNote.path);
+      } else if (event.key === "ArrowRight" && nextNote) {
+        window.location.href = resolvePath(nextNote.path);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [previousNote, nextNote]);
+
   return (
     <article className="w-full max-w-6xl mx-auto px-4 py-10">
 
