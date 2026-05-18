@@ -6,7 +6,7 @@
 [![HeroUI](https://img.shields.io/badge/HeroUI_v3-F43F5E?style=for-the-badge&logo=react-aria&logoColor=white)](https://heroui.com/)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
 
-**ApuntesDeOli** es una plataforma web moderna, rápida y de alto rendimiento diseñada como un centro de documentación interactivo para asignaturas de la carrera de Informática, destacando un completo módulo didáctico de **Redes de Computadoras (Cisco CCNA y Network+)**. 
+**ApuntesDeOli** es una plataforma web moderna, rápida y de alto rendimiento diseñada como un centro de documentación interactivo para asignaturas de la carrera de Informática.
 
 Construido sobre una arquitectura estática (SSG) híbrida utilizando **Astro**, **React**, **Tailwind CSS v4** y **HeroUI v3**.
 
@@ -43,7 +43,6 @@ Construido sobre una arquitectura estática (SSG) híbrida utilizando **Astro**,
 
 El proyecto implementa una configuración dinámica inteligente en `astro.config.mjs` para ajustar la base de rutas según el entorno de destino:
 
-*   **GitHub Pages (Subcarpeta)**: Compila automáticamente en la ruta `/ApuntesDeOli` utilizando GitHub Actions.
-    *   Sitio publicado: [https://kazutoblack2004.github.io/ApuntesDeOli/](https://kazutoblack2004.github.io/ApuntesDeOli/)
+
 *   **Vercel (Dominio Raíz)**: Detecta automáticamente el entorno del build a través de `process.env.VERCEL` y compila en la raíz (`/`), garantizando un correcto enlace de recursos.
     *   Para desplegar en Vercel, simplemente vincula el repositorio a tu panel de Vercel y haz clic en **Deploy** (toda la configuración de Astro es autodetectada).
