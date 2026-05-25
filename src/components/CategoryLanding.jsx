@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button } from "@heroui/react";
+import { Card } from "@heroui/react";
 import { ArrowRight, BookOpen, Code, Database, Network, Gamepad2 } from "lucide-react";
 import { resolvePath } from "../utils/path.js";
 

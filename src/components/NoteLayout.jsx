@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Chip } from "@heroui/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { resolvePath } from "../utils/path.js";
 
@@ -55,9 +54,9 @@ export default function NoteLayout({
 
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-white/30 mb-6">
-        <a href={resolvePath("/")} className="hover:text-pink-400 transition-colors">Inicio</a>
+        <a href={resolvePath("/")} className="hover:text-[var(--accent-text,#f9a8d4)] transition-colors">Inicio</a>
         <ChevronRight size={14} />
-        <a href={resolvePath(categoryPath)} className="hover:text-pink-400 transition-colors">{category}</a>
+        <a href={resolvePath(categoryPath)} className="hover:text-[var(--accent-text,#f9a8d4)] transition-colors">{category}</a>
         <ChevronRight size={14} />
         <span className="text-white/60 truncate">{title}</span>
       </nav>
@@ -68,7 +67,12 @@ export default function NoteLayout({
           {tags.map((tag) => (
             <span
               key={tag}
-              className="text-xs px-2.5 py-1 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-400 font-medium"
+              className="text-xs px-2.5 py-1 rounded-full border font-medium"
+              style={{
+                backgroundColor: 'var(--accent-light, rgba(236,72,153,0.1))',
+                borderColor: 'var(--accent-border, rgba(236,72,153,0.2))',
+                color: 'var(--accent-text, #f9a8d4)'
+              }}
             >
               {tag}
             </span>
@@ -78,7 +82,10 @@ export default function NoteLayout({
 
       {/* Título */}
       <h1 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">{title}</h1>
-      <div className="h-px w-24 bg-pink-500/50 mb-8 rounded-full" />
+      <div 
+        className="h-px w-24 mb-8 rounded-full" 
+        style={{ background: 'linear-gradient(to right, var(--accent-color, #ec4899), transparent)' }}
+      />
 
       {/* Contenido */}
       <div className="note-content space-y-6 text-white/75 leading-relaxed">
@@ -90,9 +97,18 @@ export default function NoteLayout({
           {previousNote ? (
             <a
               href={resolvePath(previousNote.path)}
-              className="group flex items-center gap-3 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 text-white/70 transition-colors hover:border-pink-500/30 hover:bg-pink-500/10 hover:text-pink-200"
+              className="group flex items-center gap-3 rounded-lg border bg-white/[0.03] px-4 py-3 text-white/70 transition-colors hover:bg-white/[0.05]"
+              style={{ borderColor: 'var(--accent-border, rgba(255,255,255,0.1))' }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'var(--accent-color, #ec4899)';
+                e.currentTarget.style.color = 'var(--accent-text, #f9a8d4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'var(--accent-border, rgba(255,255,255,0.1))';
+                e.currentTarget.style.color = 'rgba(255,255,255,0.7)';
+              }}
             >
-              <ChevronLeft size={18} className="shrink-0 text-pink-400" />
+              <ChevronLeft size={18} className="shrink-0" style={{ color: 'var(--accent-color, #ec4899)' }} />
               <span>
                 <span className="block text-xs uppercase tracking-widest text-white/35">
                   Anterior
@@ -107,7 +123,16 @@ export default function NoteLayout({
           {nextNote && (
             <a
               href={resolvePath(nextNote.path)}
-              className="group flex items-center justify-between gap-3 rounded-lg border border-white/10 bg-white/[0.03] px-4 py-3 text-white/70 transition-colors hover:border-pink-500/30 hover:bg-pink-500/10 hover:text-pink-200 md:text-right"
+              className="group flex items-center justify-between gap-3 rounded-lg border bg-white/[0.03] px-4 py-3 text-white/70 transition-colors hover:bg-white/[0.05] md:text-right"
+              style={{ borderColor: 'var(--accent-border, rgba(255,255,255,0.1))' }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'var(--accent-color, #ec4899)';
+                e.currentTarget.style.color = 'var(--accent-text, #f9a8d4)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'var(--accent-border, rgba(255,255,255,0.1))';
+                e.currentTarget.style.color = 'rgba(255,255,255,0.7)';
+              }}
             >
               <span>
                 <span className="block text-xs uppercase tracking-widest text-white/35">
@@ -115,7 +140,7 @@ export default function NoteLayout({
                 </span>
                 <span className="font-semibold">{nextNote.label}</span>
               </span>
-              <ChevronRight size={18} className="shrink-0 text-pink-400" />
+              <ChevronRight size={18} className="shrink-0" style={{ color: 'var(--accent-color, #ec4899)' }} />
             </a>
           )}
         </nav>
@@ -130,7 +155,7 @@ export default function NoteLayout({
           margin-top: 2.5rem;
           margin-bottom: 0.75rem;
           padding-left: 0.75rem;
-          border-left: 3px solid #ec4899;
+          border-left: 3px solid var(--accent-color, #ec4899);
         }
         .note-content h3 {
           font-size: 1.125rem;
@@ -141,7 +166,7 @@ export default function NoteLayout({
         }
         .note-content p { margin-bottom: 0.75rem; }
         .note-content strong { color: white; font-weight: 600; }
-        .note-content em { color: #f9a8d4; font-style: italic; }
+        .note-content em { color: var(--accent-text, #f9a8d4); font-style: italic; }
         .note-content ul {
           list-style: none;
           padding: 0;
@@ -156,15 +181,15 @@ export default function NoteLayout({
           content: '▸';
           position: absolute;
           left: 0;
-          color: #ec4899;
+          color: var(--accent-color, #ec4899);
         }
         /* Bloques de código inline */
         .note-content code {
           font-family: 'JetBrains Mono', 'Fira Code', monospace;
           font-size: 0.85em;
-          background: rgba(236,72,153,0.1);
-          border: 1px solid rgba(236,72,153,0.2);
-          color: #f9a8d4;
+          background: var(--accent-light, rgba(236,72,153,0.1));
+          border: 1px solid var(--accent-border, rgba(236,72,153,0.2));
+          color: var(--accent-text, #f9a8d4);
           padding: 0.15em 0.45em;
           border-radius: 0.3rem;
         }
@@ -192,12 +217,12 @@ export default function NoteLayout({
           font-size: 0.875rem;
         }
         .note-content th {
-          background: rgba(236,72,153,0.08);
-          color: #f9a8d4;
+          background: var(--accent-light, rgba(236,72,153,0.08));
+          color: var(--accent-text, #f9a8d4);
           font-weight: 600;
           padding: 0.6rem 1rem;
           text-align: left;
-          border-bottom: 1px solid rgba(236,72,153,0.2);
+          border-bottom: 1px solid var(--accent-border, rgba(236,72,153,0.2));
         }
         .note-content td {
           padding: 0.55rem 1rem;
@@ -209,8 +234,8 @@ export default function NoteLayout({
         }
         /* Callout/Nota destacada */
         .note-content .callout {
-          background: rgba(236,72,153,0.06);
-          border-left: 3px solid #ec4899;
+          background: var(--accent-light, rgba(236,72,153,0.06));
+          border-left: 3px solid var(--accent-color, #ec4899);
           border-radius: 0 0.5rem 0.5rem 0;
           padding: 0.75rem 1rem;
           margin: 1rem 0;

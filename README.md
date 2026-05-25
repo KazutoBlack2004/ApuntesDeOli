@@ -1,48 +1,231 @@
-# 📖 ApuntesDeOli — Portal Premium de Documentación Informática
+# ApuntesDeOli
 
-[![Astro](https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build/)
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![HeroUI](https://img.shields.io/badge/HeroUI_v3-F43F5E?style=for-the-badge&logo=react-aria&logoColor=white)](https://heroui.com/)
-[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
+Portal web de apuntes universitarios de informática construido con Astro, React, Tailwind CSS y HeroUI. La aplicación publica contenido estático y usa islas React para las partes interactivas: navegación, glosarios, filtros, tooltips y lectura de apuntes.
 
-**ApuntesDeOli** es una plataforma web moderna, rápida y de alto rendimiento diseñada como un centro de documentación interactivo para asignaturas de la carrera de Informática.
+Sitio publicado en GitHub Pages:
 
-Construido sobre una arquitectura estática (SSG) híbrida utilizando **Astro**, **React**, **Tailwind CSS v4** y **HeroUI v3**.
+```text
+https://KazutoBlack2004.github.io/ApuntesDeOli/
+```
 
----
+Repositorio:
 
-## 🌟 Características Destacadas
+[KazutoBlack2004/ApuntesDeOli](https://github.com/KazutoBlack2004/ApuntesDeOli)
 
-*   **🎨 Diseño Premium Glassmorphic**: Interfaz inmersiva diseñada en base a un sistema de modo oscuro puro con acentos rosa/fucsia vibrantes, gradientes armonizados y micro-animaciones fluidas de hover mediante Framer Motion.
-*   **📖 Glosario de Redes Interactivo (Hover Tooltips)**: Sistema inteligente que enlaza términos técnicos automáticamente a lo largo de las notas de estudio. Al colocar el cursor sobre palabras clave (como *IP, MAC, OSPF, VLAN, Router*), emerge de forma instantánea una tarjeta informativa de HeroUI v3 con su significado técnico.
-*   **🛎️ Botón Flotante de Estudio Ininterrumpido**: Un recurso de estudio contextualmente inteligente. Solo aparece dentro de la sección de Redes y abre un Glosario completo auto-filtrable en una nueva pestaña del navegador, evitando recargar y perder el hilo de lectura actual.
-*   **🔍 Glosario Auto-Filtrable**: Buscador predictivo en tiempo real con filtrado rápido por categorías ("Protocolos", "Dispositivos", "Conceptos") para localizar instantáneamente cualquiera de las 34 definiciones técnicas cargadas en base de datos.
-*   **⌨️ Atajos de Teclado Inteligentes**: Permite navegar entre notas contiguas de forma instantánea presionando las flechas de dirección izquierda ($\leftarrow$) y derecha ($\rightarrow$), con medidas de seguridad de UX integradas para evitar disparar la navegación al escribir dentro del buscador.
-*   **📂 Multi-Categorías**: Estructura modular preparada para múltiples apuntes:
-    *   `Redes` (Cisco CCNA completo)
-    *   `Fundamentos de Informática`
-    *   `Desarrollo de Software`
-    *   `Bases de Datos`
-    *   `Desarrollo de Videojuegos con Unity`
+## Contenido
 
----
+- [Resumen](#resumen)
+- [Tecnologías](#tecnologias)
+- [Requisitos](#requisitos)
+- [Comandos](#comandos)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Rutas principales](#rutas-principales)
+- [Arquitectura funcional](#arquitectura-funcional)
+- [Glosario interactivo](#glosario-interactivo)
+- [Despliegue](#despliegue)
+- [Documentación técnica](#documentacion-tecnica)
 
-## 🛠️ Comandos de Desarrollo y Compilación
+## Resumen
+
+ApuntesDeOli funciona como una biblioteca digital por categorías. Cada categoría tiene una página de entrada, un aside con temas internos y páginas de apuntes renderizadas sobre un layout común.
+
+La aplicación actualmente incluye:
+
+- Fundamentos
+- Ciencia de Datos
+- Desarrollo de Software
+- Bases de Datos
+- Redes
+- Desarrollo de Videojuegos
+
+Las secciones más completas son Redes y Ciencia de Datos. Ambas tienen glosarios completos, tooltips de términos dentro del texto y botón flotante para abrir el glosario de la categoría.
+
+## Tecnologías
+
+| Tecnología | Uso |
+| --- | --- |
+| Astro 6 | Enrutamiento por archivos, build estático y layouts base. |
+| React 19 | Componentes interactivos e islas hidratadas con `client:load`. |
+| Tailwind CSS 4 | Utilidades de estilo y diseño responsivo. |
+| HeroUI 3 | Componentes visuales puntuales como cards y tooltips. |
+| Lucide React | Iconos de navegación y UI. |
+| Framer Motion | Dependencia disponible para animaciones, aunque no es obligatoria en todos los componentes. |
+
+## Requisitos
+
+El proyecto declara Node.js `>=22.12.0`.
+
+Instalación inicial:
+
+```bash
+npm install
+```
+
+## Comandos
 
 | Comando | Acción |
-| :--- | :--- |
-| **`npm install`** | Instala las dependencias y prepara el proyecto. |
-| **`npm run dev`** | Inicia el servidor de desarrollo local interactivo en `localhost:4321`. |
-| **`npm run build`** | Ejecuta la compilación de producción optimizando los paquetes de Vite. |
-| **`npm run preview`** | Levanta un servidor web local apuntando al build estático compilado en `dist/`. |
+| --- | --- |
+| `npm run dev` | Inicia Astro en desarrollo. Por defecto usa `http://localhost:4321`. |
+| `npm run build` | Genera el sitio estático en `dist/`. |
+| `npm run preview` | Sirve localmente el build generado. |
+| `npm run astro` | Ejecuta la CLI de Astro. |
 
----
+## Estructura Del Proyecto
 
-## 🚀 Arquitectura y Despliegue Multi-Entorno
+```text
+.
+├── .github/workflows/          # Workflows de GitHub Pages
+├── public/                     # Archivos estáticos públicos
+├── src/
+│   ├── assets/                 # Recursos importables por Astro
+│   ├── components/             # Componentes React/Astro
+│   │   ├── CienciaDeDatos/     # Apuntes y glosario de Ciencia de Datos
+│   │   ├── Fundamentos/        # Apuntes de Fundamentos
+│   │   ├── Navigation/         # Header, Sidebar y Footer
+│   │   ├── Redes/              # Apuntes y glosario de Redes
+│   │   ├── AppLayout.jsx       # Layout global interactivo
+│   │   ├── CategoryLanding.jsx # Página tipo índice de una categoría
+│   │   ├── NoteLayout.jsx      # Plantilla común para apuntes
+│   │   └── Term.jsx            # Tooltip de términos del glosario
+│   ├── layouts/
+│   │   └── Layout.astro        # Layout Astro base
+│   ├── pages/                  # Rutas de la aplicación
+│   ├── styles/
+│   │   └── global.css          # Estilos globales
+│   └── utils/
+│       ├── glossary.js         # Diccionario central de términos
+│       └── path.js             # Resolución de rutas con base dinámica
+├── astro.config.mjs
+├── package.json
+└── README.md
+```
 
-El proyecto implementa una configuración dinámica inteligente en `astro.config.mjs` para ajustar la base de rutas según el entorno de destino:
+## Rutas Principales
 
+| Ruta | Descripción |
+| --- | --- |
+| `/` | Inicio del portal. |
+| `/Fundamentos` | Landing de Fundamentos. |
+| `/Fundamentos/UnidadesDeInformacion` | Apunte de unidades de información. |
+| `/CienciaDeDatos` | Landing de Ciencia de Datos. |
+| `/CienciaDeDatos/Introduccion` | Introducción a Ciencia de Datos. |
+| `/CienciaDeDatos/PandasNumPy` | Pandas y NumPy. |
+| `/CienciaDeDatos/EDA` | Análisis exploratorio de datos. |
+| `/CienciaDeDatos/Supervisado` | Machine Learning supervisado. |
+| `/CienciaDeDatos/NoSupervisado` | Machine Learning no supervisado. |
+| `/CienciaDeDatos/DataWarehouse` | Data Warehouse y ETL. |
+| `/CienciaDeDatos/BigData` | Big Data y Spark. |
+| `/CienciaDeDatos/BusinessIntelligence` | Business Intelligence. |
+| `/CienciaDeDatos/PythonOperaciones` | Operaciones con Python. |
+| `/CienciaDeDatos/Glosario` | Glosario filtrable de Ciencia de Datos. |
+| `/Redes` | Landing de Redes. |
+| `/Redes/TiposDeIP` | Tipos de IP. |
+| `/Redes/MascaraGateway` | Máscara y gateway. |
+| `/Redes/InterfacesDeRed` | Interfaces de red. |
+| `/Redes/ModelosRedes` | Modelos de red. |
+| `/Redes/ProtocolosDispositivos` | Protocolos y dispositivos. |
+| `/Redes/CalculoDeRedes` | Cálculo de redes. |
+| `/Redes/VlansEnrutamiento` | VLANs y enrutamiento. |
+| `/Redes/Glosario` | Glosario filtrable de Redes. |
+| `/DesarrolloSoftware` | Landing de Desarrollo de Software. |
+| `/BasesDeDatos` | Landing de Bases de Datos. |
+| `/DesarrolloVideoJuegos` | Apunte de conceptos de Unity. |
 
-*   **Vercel (Dominio Raíz)**: Detecta automáticamente el entorno del build a través de `process.env.VERCEL` y compila en la raíz (`/`), garantizando un correcto enlace de recursos.
-    *   Para desplegar en Vercel, simplemente vincula el repositorio a tu panel de Vercel y haz clic en **Deploy** (toda la configuración de Astro es autodetectada).
+## Arquitectura Funcional
+
+El flujo principal es:
+
+```text
+src/pages/**/index.astro
+  -> src/layouts/Layout.astro
+    -> src/components/AppLayout.jsx
+      -> Header + Sidebar + contenido + Footer
+```
+
+Las páginas `.astro` son responsables de importar el componente React del apunte o landing. `Layout.astro` entrega `currentPath` a `AppLayout`, y `AppLayout` calcula la categoría activa, el tema visual, los subtemas del aside y el botón flotante del glosario.
+
+Los apuntes usan `NoteLayout.jsx`, que entrega:
+
+- breadcrumb
+- etiquetas del apunte
+- título
+- estilos tipográficos para contenido
+- navegación anterior/siguiente
+- navegación con flechas del teclado
+
+## Glosario Interactivo
+
+El diccionario central está en:
+
+```text
+src/utils/glossary.js
+```
+
+Cada término tiene esta forma:
+
+```js
+clave: {
+  title: "Nombre visible",
+  def: "Definición del término."
+}
+```
+
+Para usar un término dentro de un apunte:
+
+```jsx
+import Term from "../Term.jsx";
+
+<Term id="machine_learning">Machine Learning</Term>
+```
+
+`Term.jsx` busca el `id` en `GLOSSARY_TERMS`. Si existe, muestra un tooltip al pasar el cursor o enfocar con teclado. Si no existe, renderiza el texto normal y en desarrollo muestra una advertencia en consola.
+
+Los glosarios completos son:
+
+- `src/components/Redes/GlosarioRedes.jsx`
+- `src/components/CienciaDeDatos/GlosarioCienciaDatos.jsx`
+
+## Despliegue
+
+La configuración de Astro usa una base dinámica:
+
+```js
+base: (isDev || isVercel) ? "/" : "/ApuntesDeOli"
+```
+
+Esto significa:
+
+- En desarrollo local, las rutas usan `/`.
+- En Vercel, las rutas usan `/`.
+- En GitHub Pages, las rutas usan `/ApuntesDeOli`.
+
+El workflow recomendado para GitHub Pages es:
+
+```text
+.github/workflows/deploy.yml
+```
+
+Existe también:
+
+```text
+.github/workflows/static.yml
+```
+
+Ese workflow sube el repositorio completo como contenido estático y puede no representar el build final de Astro. Si se mantiene GitHub Pages como destino principal, conviene usar `deploy.yml` como referencia.
+
+## Documentación Técnica
+
+La documentación extendida está en:
+
+- [Arquitectura](docs/ARCHITECTURE.md)
+- [Guía de contenido y mantenimiento](docs/CONTENT_GUIDE.md)
+
+## Estado Del Proyecto
+
+La aplicación compila como sitio estático con:
+
+```bash
+npm run build
+```
+
+El build genera 26 páginas estáticas en `dist/`.

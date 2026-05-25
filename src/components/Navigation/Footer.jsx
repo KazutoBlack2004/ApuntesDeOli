@@ -9,7 +9,13 @@ export function Footer() {
           Hecho con <Heart size={14} className="text-pink-500" /> para Apuntes de Oli
         </p>
         <div className="flex items-center gap-4">
-          <a href="#" className="text-white/50 hover:text-pink-400 transition-colors">
+          <a
+            href="https://github.com/KazutoBlack2004/ApuntesDeOli"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/50 hover:text-pink-400 transition-colors"
+            aria-label="Repositorio de ApuntesDeOli en GitHub"
+          >
             <Github size={18} />
           </a>
         </div>

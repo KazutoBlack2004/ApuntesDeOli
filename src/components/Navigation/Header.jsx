@@ -1,5 +1,4 @@
 import React from "react";
-import { Button, Link } from "@heroui/react";
 import { BookOpen, Code, Database, Network, Gamepad2 } from "lucide-react";
 import { resolvePath } from "../../utils/path.js";
 
@@ -17,9 +16,13 @@ export function Header({ activeCategory }) {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-pink-500/20 bg-black/80 backdrop-blur-md px-6 h-16 flex items-center justify-between shadow-[0_4px_30px_rgba(236,72,153,0.1)]">
       <div className="flex items-center gap-2">
-        <span className="font-extrabold text-2xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600">
+        <a
+          href={resolvePath("/")}
+          className="font-extrabold text-2xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600 transition-opacity hover:opacity-80"
+          aria-label="Ir al inicio"
+        >
           ApuntesDeOli
-        </span>
+        </a>
       </div>
       
       <nav className="hidden md:flex items-center gap-2">
@@ -27,16 +30,18 @@ export function Header({ activeCategory }) {
           const Icon = cat.icon;
           const isActive = activeCategory?.id === cat.id;
           return (
-            <Button
+            <a
               key={cat.id}
-              variant={isActive ? "primary" : "ghost"}
-              size="sm"
-              className={`text-sm font-medium transition-all ${isActive ? "shadow-[0_0_10px_rgba(236,72,153,0.3)]" : "text-white/70 hover:text-pink-300"}`}
-              onPress={() => window.location.href = resolvePath(cat.path)}
+              href={resolvePath(cat.path)}
+              className={`inline-flex h-8 items-center rounded-lg px-3 text-sm font-medium transition-all ${
+                isActive
+                  ? "bg-[var(--accent-color,#ec4899)] text-white shadow-[0_0_10px_var(--accent-glow,rgba(236,72,153,0.3))]"
+                  : "text-white/70 hover:bg-white/5 hover:text-[var(--accent-text,#f9a8d4)]"
+              }`}
             >
               <Icon size={16} className="mr-2" />
               {cat.label}
-            </Button>
+            </a>
           );
         })}
       </nav>
