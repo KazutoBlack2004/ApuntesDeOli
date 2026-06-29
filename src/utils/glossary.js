@@ -248,5 +248,13 @@ export const GLOSSARY_TERMS = {
   pipeline: {
     title: "Pipeline de Datos",
     def: "Conjunto de procesos automatizados de software que mueven datos desde un origen, aplicando transformaciones en serie, hasta guardarlos en un sistema de destino final."
+  },
+  url: {
+    title: "URL (Uniform Resource Locator)",
+    def: "Localizador Uniforme de Recursos. Es la dirección específica que se asigna a cada uno de los recursos disponibles en Internet (páginas, imágenes, videos) para que puedan ser localizados."
+  },
+  http: {
+    title: "HTTP / HTTPS (Hypertext Transfer Protocol)",
+    def: "Protocolo de Transferencia de Hipertexto. Es la base de la comunicación de datos en la World Wide Web. HTTPS es la versión segura y cifrada."
   }
 };

@@ -209,6 +209,52 @@ export default function ProtocolosDispositivos() {
         </li>
       </ul>
 
+      <h2>La Anatomía de una URL</h2>
+      <p>
+        El <strong><Term id="url">URL</Term></strong> (Uniform Resource Locator) es la dirección específica que se asigna a cada uno de los recursos disponibles en la red. Trabaja estrechamente con el <Term id="dns">DNS</Term> para llevarte a la página web correcta.
+      </p>
+      <p>
+        Podemos desglosar una URL típica, por ejemplo <code>https://www.example.com/page</code>, en las siguientes partes:
+      </p>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 my-6">
+        <div className="p-4 bg-neutral-900/60 border border-white/10 rounded-xl hover:border-pink-500/30 transition-colors shadow-md">
+          <span className="text-pink-400 font-bold block mb-1">https://</span>
+          <span className="text-sm font-semibold block mb-2 text-white/90">Protocolo</span>
+          <p className="text-[11px] text-white/70">
+            Define cómo se transmiten los datos. Generalmente es <Term id="http">HTTP o HTTPS</Term> (cifrado y seguro).
+          </p>
+        </div>
+        <div className="p-4 bg-neutral-900/60 border border-white/10 rounded-xl hover:border-blue-500/30 transition-colors shadow-md">
+          <span className="text-blue-400 font-bold block mb-1">www.</span>
+          <span className="text-sm font-semibold block mb-2 text-white/90">Subdominio</span>
+          <p className="text-[11px] text-white/70">
+            Una subdivisión del dominio principal, útil para separar servicios (ej. mail., blog., www.).
+          </p>
+        </div>
+        <div className="p-4 bg-neutral-900/60 border border-white/10 rounded-xl hover:border-green-500/30 transition-colors shadow-md">
+          <span className="text-green-400 font-bold block mb-1">example</span>
+          <span className="text-sm font-semibold block mb-2 text-white/90">Nombre de Dominio</span>
+          <p className="text-[11px] text-white/70">
+            El nombre principal y único del sitio web, fácil de recordar para los humanos en vez de usar direcciones IP.
+          </p>
+        </div>
+        <div className="p-4 bg-neutral-900/60 border border-white/10 rounded-xl hover:border-amber-500/30 transition-colors shadow-md">
+          <span className="text-amber-400 font-bold block mb-1">.com</span>
+          <span className="text-sm font-semibold block mb-2 text-white/90">Extensión / TLD</span>
+          <p className="text-[11px] text-white/70">
+            Dominio de nivel superior (Top-Level Domain). Indica el propósito (.com, .edu) o ubicación (.ar, .es).
+          </p>
+        </div>
+        <div className="p-4 bg-neutral-900/60 border border-white/10 rounded-xl hover:border-purple-500/30 transition-colors shadow-md">
+          <span className="text-purple-400 font-bold block mb-1">/page</span>
+          <span className="text-sm font-semibold block mb-2 text-white/90">Ruta (Path)</span>
+          <p className="text-[11px] text-white/70">
+            La ubicación específica, carpeta o archivo dentro del servidor web al que quieres acceder.
+          </p>
+        </div>
+      </div>
+
       <div className="callout">
         <strong>Curiosidad de examen Cisco:</strong> Cuando abres tu navegador y escribes <code>www.ejemplo.com</code> por primera vez,
         se desencadena una orquesta de protocolos en milisegundos: tu PC pide IP por <strong>DHCP</strong>, luego consulta al servidor <strong>DNS</strong> por UDP,
