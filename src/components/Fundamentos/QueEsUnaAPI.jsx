@@ -71,7 +71,7 @@ const API_SERVICES = {
       nombre: "Oli",
       edad_humana: "3 años",
       caracter: "Juguetón, cariñoso, le encanta comer calcetines y programar por las noches",
-      imagen_avatar: "🐕"
+      imagen_avatar: "Golden Retriever Avatar"
     })
   }
 };
@@ -208,10 +208,10 @@ export default function QueEsUnaAPI() {
         </div>
 
         {/* Workspace Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[380px]">
+        <div className="flex flex-col lg:flex-row min-h-[380px] w-full">
           
-          {/* Inputs Section (40% width) */}
-          <div className="lg:col-span-5 p-5 border-r border-white/5 flex flex-col justify-between bg-black/10">
+          {/* Inputs Section (40% width on desktop) */}
+          <div className="w-full lg:w-[40%] p-5 border-b lg:border-b-0 lg:border-r border-white/5 flex flex-col justify-between bg-black/10">
             <div className="space-y-4">
               <span className="text-xs uppercase tracking-wider font-semibold text-white/40 flex items-center gap-1.5">
                 <Globe size={13} />
@@ -284,8 +284,8 @@ export default function QueEsUnaAPI() {
             </div>
           </div>
 
-          {/* Outputs Section (60% width) */}
-          <div className="lg:col-span-7 p-5 flex flex-col justify-between bg-black/20">
+          {/* Outputs Section (60% width on desktop) */}
+          <div className="flex-1 p-5 flex flex-col justify-between bg-black/20">
             <div>
               <span className="text-xs uppercase tracking-wider font-semibold text-white/40 block mb-3">
                 Respuesta del Servidor
@@ -343,7 +343,9 @@ export default function QueEsUnaAPI() {
 
                       {activeTab === "perritos" && (
                         <div className="p-4 rounded-xl border border-pink-500/10 bg-pink-500/5 text-white flex flex-col items-center justify-center text-center gap-1.5 min-h-[140px]">
-                          <span className="text-3xl select-none">{response.imagen_avatar}</span>
+                          <div className="w-10 h-10 rounded-lg bg-pink-500/10 border border-pink-500/20 flex items-center justify-center mb-1">
+                            <Heart size={20} className="text-pink-500 fill-pink-500/20" />
+                          </div>
                           <div className="flex items-center gap-1">
                             <span className="text-xs font-bold text-pink-300">{response.nombre}</span>
                             <Heart size={10} className="text-pink-500 fill-pink-500 animate-pulse" />
@@ -422,7 +424,9 @@ export default function QueEsUnaAPI() {
             
             {/* Visual representation of Ditto */}
             <div className="mt-3 p-3.5 rounded-xl border border-yellow-500/10 bg-yellow-500/5 flex items-center gap-3">
-              <span className="text-3xl filter drop-shadow-[0_0_8px_rgba(234,179,8,0.3)]">👾</span>
+              <div className="w-10 h-10 rounded-lg bg-yellow-500/10 border border-yellow-500/20 flex items-center justify-center shrink-0">
+                <Compass size={20} className="text-yellow-400" />
+              </div>
               <div>
                 <span className="text-xs font-bold text-white block">Ditto <span className="text-[10px] text-yellow-400 font-normal">#132</span></span>
                 <span className="text-[10px] text-white/70 block">Tipo: Normal | Altura: 0.3 m</span>
@@ -514,9 +518,10 @@ export default function QueEsUnaAPI() {
               (con sus fotos de avatar), estados de vida, especies, planetas de origen y listas de episodios.
             </p>
 
-            {/* Visual representation of Rick Sanchez */}
             <div className="mt-3 p-3.5 rounded-xl border border-indigo-500/10 bg-indigo-500/5 flex items-center gap-3">
-              <span className="text-3xl filter drop-shadow-[0_0_8px_rgba(99,102,241,0.3)]">🧪</span>
+              <div className="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center shrink-0">
+                <Server size={20} className="text-indigo-400" />
+              </div>
               <div>
                 <span className="text-xs font-bold text-white block">Rick Sanchez</span>
                 <span className="text-[10px] text-white/70 block">Especie: Humano | Origen: Tierra (C-137)</span>
@@ -563,9 +568,10 @@ export default function QueEsUnaAPI() {
               aleatorias. Excelente para practicar la integración de imágenes en el desarrollo frontend.
             </p>
 
-            {/* Visual representation of a Golden Retriever */}
             <div className="mt-3 p-3.5 rounded-xl border border-pink-500/10 bg-pink-500/5 flex items-center gap-3">
-              <span className="text-3xl filter drop-shadow-[0_0_8px_rgba(236,72,153,0.3)]">🐕</span>
+              <div className="w-10 h-10 rounded-lg bg-pink-500/10 border border-pink-500/20 flex items-center justify-center shrink-0">
+                <Heart size={20} className="text-pink-500" />
+              </div>
               <div>
                 <span className="text-xs font-bold text-white block">Golden Retriever</span>
                 <span className="text-[10px] text-white/70 block">Temperamento: Amigable, Inteligente, Devoto</span>

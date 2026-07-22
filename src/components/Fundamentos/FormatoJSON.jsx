@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import NoteLayout from "../NoteLayout.jsx";
 import Term from "../Term.jsx";
 import { 
-  FileCode, 
   CheckCircle, 
   AlertOctagon, 
   Terminal, 
@@ -131,8 +130,8 @@ export default function FormatoJSON() {
         path: "/Fundamentos/QueEsUnaAPI",
       }}
       nextNote={{
-        label: "Operaciones CRUD",
-        path: "/Fundamentos/CrudOperaciones",
+        label: "¿Qué es NPM?",
+        path: "/Fundamentos/QueEsNPM",
       }}
     >
       <div className="callout">

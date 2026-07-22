@@ -154,7 +154,7 @@ export default function CrudOperaciones() {
       category="Fundamentos"
       categoryPath="/Fundamentos"
       tags={["CRUD", "HTTP", "REST API", "Bases de Datos"]}
-      previousNote={{ label: "¿Qué es una API?", path: "/Fundamentos/QueEsUnaAPI" }}
+      previousNote={{ label: "¿Qué es NPM?", path: "/Fundamentos/QueEsNPM" }}
     >
       <div className="callout">
         El concepto de <Term id="crud">CRUD</Term> define las cuatro operaciones fundamentales 
@@ -331,10 +331,10 @@ export default function CrudOperaciones() {
         </div>
 
         {/* Workspace Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 min-h-[480px]">
+        <div className="flex flex-col lg:flex-row min-h-[480px] w-full">
           
           {/* Column 1: Client Request Builder (40%) */}
-          <div className="lg:col-span-5 p-5 border-r border-white/5 flex flex-col justify-between bg-black/10">
+          <div className="w-full lg:w-[40%] p-5 border-b lg:border-b-0 lg:border-r border-white/5 flex flex-col justify-between bg-black/10">
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs uppercase tracking-wider font-semibold text-white/40 flex items-center gap-1.5">
@@ -482,7 +482,7 @@ ${activeTab === "POST" || activeTab === "PUT" ? "Content-Type: application/json"
           </div>
 
           {/* Column 2: Middleware Visual Pipeline & DB state (70% combined) */}
-          <div className="lg:col-span-7 flex flex-col">
+          <div className="flex-1 flex flex-col">
             
             {/* Top half: Network Flow Animation & DB Logic */}
             <div className="p-5 border-b border-white/5 flex-1 flex flex-col justify-between min-h-[220px]">

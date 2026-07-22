@@ -72,7 +72,15 @@ export function AppLayout({ children, currentPath = "" }) {
       { id: "unidades-de-informacion", label: "Unidades de información", path: "/Fundamentos/UnidadesDeInformacion" },
       { id: "que-es-una-api", label: "¿Qué es una API?", path: "/Fundamentos/QueEsUnaAPI" },
       { id: "formato-json", label: "Formato JSON", path: "/Fundamentos/FormatoJSON" },
+      { id: "que-es-npm", label: "¿Qué es NPM?", path: "/Fundamentos/QueEsNPM" },
       { id: "crud-operaciones", label: "Operaciones CRUD", path: "/Fundamentos/CrudOperaciones" },
+    ],
+    "/DesarrolloSoftware": [
+      { id: "convenciones-commits", label: "Git y Convenciones", path: "/DesarrolloSoftware/ConvencionesCommits" },
+      { id: "poo", label: "Programación Orientada a Objetos", path: "/DesarrolloSoftware/POO" },
+      { id: "frameworks-librerias", label: "Frameworks y Librerías", path: "/DesarrolloSoftware/FrameworksYLibrerias" },
+      { id: "seo", label: "SEO para Desarrollo Web", path: "/DesarrolloSoftware/SEO" },
+      { id: "testing", label: "Testing de Software", path: "/DesarrolloSoftware/Testing" },
     ],
     "/DesarrolloVideoJuegos": [
       { id: "conceptos-unity", label: "Conceptos Unity", path: "/DesarrolloVideoJuegos" },
