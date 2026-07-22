@@ -110,8 +110,8 @@ export default function QueEsUnaAPI() {
         path: "/Fundamentos/UnidadesDeInformacion",
       }}
       nextNote={{
-        label: "Operaciones CRUD",
-        path: "/Fundamentos/CrudOperaciones",
+        label: "Formato JSON",
+        path: "/Fundamentos/FormatoJSON",
       }}
     >
       <div className="callout">
