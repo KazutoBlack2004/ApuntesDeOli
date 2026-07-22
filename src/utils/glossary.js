@@ -256,5 +256,25 @@ export const GLOSSARY_TERMS = {
   http: {
     title: "HTTP / HTTPS (Hypertext Transfer Protocol)",
     def: "Protocolo de Transferencia de Hipertexto. Es la base de la comunicación de datos en la World Wide Web. HTTPS es la versión segura y cifrada."
+  },
+  crud: {
+    title: "CRUD (Create, Read, Update, Delete)",
+    def: "Acrónimo que define las cuatro operaciones básicas para la gestión de datos persistentes: Crear, Leer, Actualizar y Eliminar."
+  },
+  api: {
+    title: "API (Application Programming Interface)",
+    def: "Interfaz de Programación de Aplicaciones. Conjunto de reglas y definiciones que permiten que diferentes aplicaciones de software se comuniquen entre sí."
+  },
+  rest: {
+    title: "REST (Representational State Transfer)",
+    def: "Estilo de arquitectura de desarrollo web que utiliza métodos HTTP estándar para manipular recursos a través de URLs únicas de forma sin estado."
+  },
+  json: {
+    title: "JSON (JavaScript Object Notation)",
+    def: "Formato de texto ligero y estructurado basado en pares clave-valor, ampliamente utilizado para enviar y recibir datos en peticiones y respuestas HTTP."
+  },
+  metodo_http: {
+    title: "Métodos HTTP",
+    def: "Verbos estándar (como GET, POST, PUT, DELETE) incluidos en una petición HTTP que le indican al servidor qué tipo de acción se desea realizar sobre un recurso."
   }
 };

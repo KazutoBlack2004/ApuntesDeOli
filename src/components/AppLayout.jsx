@@ -70,6 +70,8 @@ export function AppLayout({ children, currentPath = "" }) {
   const subTopics = {
     "/Fundamentos": [
       { id: "unidades-de-informacion", label: "Unidades de información", path: "/Fundamentos/UnidadesDeInformacion" },
+      { id: "que-es-una-api", label: "¿Qué es una API?", path: "/Fundamentos/QueEsUnaAPI" },
+      { id: "crud-operaciones", label: "Operaciones CRUD", path: "/Fundamentos/CrudOperaciones" },
     ],
     "/DesarrolloVideoJuegos": [
       { id: "conceptos-unity", label: "Conceptos Unity", path: "/DesarrolloVideoJuegos" },
@@ -82,6 +84,7 @@ export function AppLayout({ children, currentPath = "" }) {
       { id: "protocolos-dispositivos", label: "Dispositivos y protocolos", path: "/Redes/ProtocolosDispositivos" },
       { id: "calculo-de-redes", label: "Cálculo de redes", path: "/Redes/CalculoDeRedes" },
       { id: "vlans-enrutamiento", label: "VLANs y enrutamiento", path: "/Redes/VlansEnrutamiento" },
+      { id: "codigos-http", label: "Códigos de estado HTTP", path: "/Redes/CodigosHTTP" },
     ],
     "/CienciaDeDatos": [
       { id: "introduccion", label: "Introducción", path: "/CienciaDeDatos/Introduccion" },

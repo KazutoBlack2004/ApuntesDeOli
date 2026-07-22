@@ -8,6 +8,7 @@ export default function UnidadesDeInformacion() {
       category="Fundamentos"
       categoryPath="/Fundamentos"
       tags={["Bit", "Byte", "Nomenclatura", "Almacenamiento"]}
+      nextNote={{ label: "¿Qué es una API?", path: "/Fundamentos/QueEsUnaAPI" }}
     >
       <div className="callout">
         Las unidades de información permiten medir datos: desde un valor mínimo

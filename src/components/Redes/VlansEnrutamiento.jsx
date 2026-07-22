@@ -13,6 +13,10 @@ export default function VlansEnrutamiento() {
         label: "Cálculo de redes",
         path: "/Redes/CalculoDeRedes",
       }}
+      nextNote={{
+        label: "Códigos de estado HTTP",
+        path: "/Redes/CodigosHTTP",
+      }}
     >
       <div className="callout">
         ¡Bienvenido al tema estrella de Cisco CCNA! En redes corporativas, no dejamos a miles de dispositivos
