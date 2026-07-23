@@ -22,6 +22,7 @@ export default function NoteLayout({
   tags = [],
   previousNote,
   nextNote,
+  icon: Icon,
   children,
 }) {
   useEffect(() => {
@@ -81,7 +82,10 @@ export default function NoteLayout({
       )}
 
       {/* Título */}
-      <h1 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">{title}</h1>
+      <h1 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2 flex items-center gap-3">
+        {Icon && <Icon className="text-[var(--accent-color,#ec4899)] w-8 h-8 md:w-10 md:h-10 shrink-0" />}
+        <span>{title}</span>
+      </h1>
       <div 
         className="h-px w-24 mb-8 rounded-full" 
         style={{ background: 'linear-gradient(to right, var(--accent-color, #ec4899), transparent)' }}

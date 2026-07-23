@@ -65,6 +65,7 @@ export default function Testing() {
       categoryPath="/DesarrolloSoftware"
       tags={["Testing", "Jest", "Vitest", "E2E", "Playwright", "TestSprite", "QA"]}
       previousNote={{ label: "SEO para Desarrollo Web", path: "/DesarrolloSoftware/SEO" }}
+      icon={Code}
     >
       <div className="callout">
         El <strong>testing de software</strong> es el proceso de verificar que un programa funciona correctamente,

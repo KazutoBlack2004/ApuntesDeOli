@@ -18,10 +18,11 @@ export function Header({ activeCategory }) {
       <div className="flex items-center gap-2">
         <a
           href={resolvePath("/")}
-          className="font-extrabold text-2xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600 transition-opacity hover:opacity-80"
+          className="font-extrabold text-2xl tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600 transition-opacity hover:opacity-80 flex items-center gap-1.5"
           aria-label="Ir al inicio"
         >
-          ApuntesDeOli
+          <span className="font-mono text-3xl font-black select-none tracking-normal">&lt;/&gt;</span>
+          <span>ApuntesDeOli</span>
         </a>
       </div>
       

@@ -11,6 +11,7 @@ export interface Props {
 const { title, description, image = '/favicon.svg' } = Astro.props;
 const resolvedIcon = resolvePath('/favicon.svg');
 const resolvedImage = resolvePath(image);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://apuntesdeoli.vercel.app');
 ---
 
 <!-- Global Metadata -->
@@ -18,6 +19,9 @@ const resolvedImage = resolvePath(image);
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href={resolvedIcon} />
 <meta name="generator" content={Astro.generator} />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
