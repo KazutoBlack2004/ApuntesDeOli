@@ -332,5 +332,17 @@ export const GLOSSARY_TERMS = {
   brutalismo: {
     title: "Brutalismo Web (Neobrutalism)",
     def: "Estilo de diseño que utiliza colores de alto contraste (neón), bordes negros gruesos, sombras duras sin degradados y tipografías monoespaciadas, desafiando la simetría convencional."
+  },
+  vidrio_liquido: {
+    title: "Vidrio Líquido (Liquid Glass / Aurora)",
+    def: "Variación avanzada del glasmorfismo que incorpora degradados fluidos y formas orgánicas coloridas (blobs) que simulan auroras en constante movimiento detrás del vidrio."
+  },
+  bento_grid: {
+    title: "Bento Grid",
+    def: "Layout que organiza la información en bloques y tarjetas de diferentes tamaños agrupadas de forma compacta y armoniosa, similar a una bandeja de bento japonesa."
+  },
+  ui_espacial: {
+    title: "UI Espacial (Spatial UI)",
+    def: "Diseño para entornos tridimensionales y de realidad mixta que destaca por capas de vidrio flotantes sensibles a la luz física ambiental y sombras proyectadas ultraprofundas."
   }
 };

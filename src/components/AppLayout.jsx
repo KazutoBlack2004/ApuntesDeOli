@@ -82,6 +82,7 @@ export function AppLayout({ children, currentPath = "" }) {
       { id: "frameworks-librerias", label: "Frameworks y Librerías", path: "/DesarrolloSoftware/FrameworksYLibrerias" },
       { id: "seo", label: "SEO para Desarrollo Web", path: "/DesarrolloSoftware/SEO" },
       { id: "optimizacion-imagenes", label: "Optimización de Imágenes", path: "/DesarrolloSoftware/OptimizacionImagenes" },
+      { id: "estilos-ui", label: "Estilos de Interfaz (UI)", path: "/DesarrolloSoftware/EstilosUI" },
       { id: "testing", label: "Testing de Software", path: "/DesarrolloSoftware/Testing" },
     ],
     "/DesarrolloVideoJuegos": [
