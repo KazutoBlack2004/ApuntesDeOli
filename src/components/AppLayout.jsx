@@ -81,6 +81,7 @@ export function AppLayout({ children, currentPath = "" }) {
       { id: "poo", label: "Programación Orientada a Objetos", path: "/DesarrolloSoftware/POO" },
       { id: "frameworks-librerias", label: "Frameworks y Librerías", path: "/DesarrolloSoftware/FrameworksYLibrerias" },
       { id: "seo", label: "SEO para Desarrollo Web", path: "/DesarrolloSoftware/SEO" },
+      { id: "optimizacion-imagenes", label: "Optimización de Imágenes", path: "/DesarrolloSoftware/OptimizacionImagenes" },
       { id: "testing", label: "Testing de Software", path: "/DesarrolloSoftware/Testing" },
     ],
     "/DesarrolloVideoJuegos": [

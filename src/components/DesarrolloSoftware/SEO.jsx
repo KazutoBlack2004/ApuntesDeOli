@@ -598,6 +598,7 @@ export default function SEO() {
       categoryPath="/DesarrolloSoftware"
       tags={["SEO", "Meta Tags", "Google", "Open Graph", "Core Web Vitals", "Posicionamiento"]}
       previousNote={{ label: "Frameworks y Librerías", path: "/DesarrolloSoftware/FrameworksYLibrerias" }}
+      nextNote={{ label: "Optimización de Imágenes", path: "/DesarrolloSoftware/OptimizacionImagenes" }}
     >
       <div className="callout">
         El <strong>SEO (Search Engine Optimization)</strong> es el conjunto de prácticas técnicas y de contenido 

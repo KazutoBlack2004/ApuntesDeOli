@@ -304,5 +304,33 @@ export const GLOSSARY_TERMS = {
   autorizacion: {
     title: "Autorización",
     def: "Proceso de validar a qué recursos o acciones específicas tiene derecho a acceder un usuario previamente identificado."
+  },
+  lcp: {
+    title: "LCP (Largest Contentful Paint)",
+    def: "Métrica de rendimiento web (Core Web Vitals) que mide el tiempo que tarda en renderizarse el elemento visual más grande de la pantalla."
+  },
+  webp: {
+    title: "WebP",
+    def: "Formato de imagen de última generación desarrollado por Google que proporciona una compresión de imagen web muy superior con archivos más ligeros."
+  },
+  glasmorfismo: {
+    title: "Glasmorfismo (Glassmorphism)",
+    def: "Estilo de diseño que imita el aspecto del vidrio esmerilado translúcido usando transparencias, desenfoque de fondo (backdrop-filter: blur) y bordes finos."
+  },
+  neumorfismo: {
+    title: "Neumorfismo (Neumorphism)",
+    def: "Estilo que simula extrusiones o bajorrelieves suaves de plástico usando sombras paralelas dobles (una clara y una oscura) del color del fondo."
+  },
+  claymorfismo: {
+    title: "Claymorfismo (Claymorphism)",
+    def: "Estilo visual que imita figuras de arcilla o plastilina 3D suave, usando bordes redondeados pronunciados, sombras internas y colores pastel inflados."
+  },
+  esqueumorfismo: {
+    title: "Esqueumorfismo (Skeuomorphism)",
+    def: "Técnica de diseño que imita objetos y texturas del mundo real (como cuero, madera, metal pulido o botones con volumen) para hacerlos familiares al usuario."
+  },
+  brutalismo: {
+    title: "Brutalismo Web (Neobrutalism)",
+    def: "Estilo de diseño que utiliza colores de alto contraste (neón), bordes negros gruesos, sombras duras sin degradados y tipografías monoespaciadas, desafiando la simetría convencional."
   }
 };
