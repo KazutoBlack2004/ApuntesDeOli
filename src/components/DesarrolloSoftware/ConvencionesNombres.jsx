@@ -55,7 +55,7 @@ export default function ConvencionesNombres() {
       categoryPath="/DesarrolloSoftware"
       tags={["Código Limpio", "Sintaxis", "camelCase", "PascalCase", "snake_case", "Buenas Prácticas"]}
       previousNote={{ label: "Estilos de Interfaz (UI)", path: "/DesarrolloSoftware/EstilosUI" }}
-      nextNote={{ label: "Testing de Software", path: "/DesarrolloSoftware/Testing" }}
+      nextNote={{ label: "Seguridad y Escalabilidad", path: "/DesarrolloSoftware/SeguridadYEscalabilidad" }}
     >
       <div className="callout">
         Las <strong>Convenciones de Nombres</strong> (Casing Conventions) son estándares que dictan cómo formatear 

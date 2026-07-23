@@ -364,5 +364,25 @@ export const GLOSSARY_TERMS = {
   screaming_snakecase: {
     title: "SCREAMING_SNAKE_CASE",
     def: "Estilo donde todas las palabras se escriben en mayúsculas separadas por guiones bajos. Utilizado habitualmente para constantes globales. Ej: MAX_RETRY_LIMIT."
+  },
+  connection_pooling: {
+    title: "Connection Pooling (Pool de Conexiones)",
+    def: "Técnica de caché de conexiones de base de datos reutilizables para evitar abrir y cerrar una nueva conexión por cada petición HTTP, previniendo el colapso bajo tráfico masivo."
+  },
+  env_variables: {
+    title: "Variables de Entorno (Environment Variables)",
+    def: "Valores dinámicos configurados en el sistema operativo o hosting (usualmente cargados mediante archivos .env) para almacenar secretos y credenciales fuera del código fuente."
+  },
+  sql_injection: {
+    title: "Inyección SQL (SQL Injection / SQLi)",
+    def: "Vulnerabilidad donde un atacante inyecta código SQL malicioso en los inputs de la aplicación para manipular, robar o destruir datos de la base de datos."
+  },
+  rls: {
+    title: "RLS (Row Level Security)",
+    def: "Mecanismo de seguridad de base de datos que restringe qué filas de una tabla pueden ser leídas, creadas o actualizadas por un usuario específico basado en políticas."
+  },
+  rate_limiting: {
+    title: "Rate Limiting (Limitador de Tasa)",
+    def: "Medida de control que limita el número de solicitudes HTTP que un cliente o dirección IP puede realizar a un servidor en un periodo de tiempo determinado."
   }
 };

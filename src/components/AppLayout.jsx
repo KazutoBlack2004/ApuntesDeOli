@@ -84,6 +84,7 @@ export function AppLayout({ children, currentPath = "" }) {
       { id: "optimizacion-imagenes", label: "Optimización de Imágenes", path: "/DesarrolloSoftware/OptimizacionImagenes" },
       { id: "estilos-ui", label: "Estilos de Interfaz (UI)", path: "/DesarrolloSoftware/EstilosUI" },
       { id: "convenciones-nombres", label: "Convenciones de Nombres", path: "/DesarrolloSoftware/ConvencionesNombres" },
+      { id: "seguridad-escalabilidad", label: "Seguridad y Escalabilidad", path: "/DesarrolloSoftware/SeguridadYEscalabilidad" },
       { id: "testing", label: "Testing de Software", path: "/DesarrolloSoftware/Testing" },
     ],
     "/DesarrolloVideoJuegos": [
