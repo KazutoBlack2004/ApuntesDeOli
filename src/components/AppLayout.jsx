@@ -74,6 +74,7 @@ export function AppLayout({ children, currentPath = "" }) {
       { id: "formato-json", label: "Formato JSON", path: "/Fundamentos/FormatoJSON" },
       { id: "que-es-npm", label: "¿Qué es NPM?", path: "/Fundamentos/QueEsNPM" },
       { id: "crud-operaciones", label: "Operaciones CRUD", path: "/Fundamentos/CrudOperaciones" },
+      { id: "tokens-y-jwt", label: "Tokens y JWT", path: "/Fundamentos/TokensYJWT" },
     ],
     "/DesarrolloSoftware": [
       { id: "convenciones-commits", label: "Git y Convenciones", path: "/DesarrolloSoftware/ConvencionesCommits" },

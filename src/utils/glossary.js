@@ -276,5 +276,33 @@ export const GLOSSARY_TERMS = {
   metodo_http: {
     title: "Métodos HTTP",
     def: "Verbos estándar (como GET, POST, PUT, DELETE) incluidos en una petición HTTP que le indican al servidor qué tipo de acción se desea realizar sobre un recurso."
+  },
+  token: {
+    title: "Token",
+    def: "Un objeto digital (cadena de caracteres) que representa una identidad, sesión o permisos de acceso, funcionando como una llave digital para consumir recursos protegidos."
+  },
+  jwt: {
+    title: "JWT (JSON Web Token)",
+    def: "Estándar abierto (RFC 7519) que define un formato compacto y autónomo para transmitir información estructurada en formato JSON de forma segura y firmada criptográficamente."
+  },
+  payload: {
+    title: "Payload (Carga útil)",
+    def: "Segunda sección de un JWT que contiene los datos reales (claims) transmitidos, como el ID del usuario, su rol o la fecha de expiración del token."
+  },
+  firma: {
+    title: "Firma Digital (Signature)",
+    def: "Tercera sección de un JWT calculada al codificar y firmar el Header y Payload usando una clave secreta. Sirve para verificar que el token no ha sido manipulado en el camino."
+  },
+  base64: {
+    title: "Base64URL",
+    def: "Esquema de codificación que traduce datos binarios a texto seguro para URLs, eliminando caracteres incompatibles como '+' o '/' y omitiendo el relleno '='."
+  },
+  autenticacion: {
+    title: "Autenticación",
+    def: "Proceso de verificar la identidad de una persona o sistema (ej. confirmar que eres quien dices ser mediante usuario y contraseña)."
+  },
+  autorizacion: {
+    title: "Autorización",
+    def: "Proceso de validar a qué recursos o acciones específicas tiene derecho a acceder un usuario previamente identificado."
   }
 };

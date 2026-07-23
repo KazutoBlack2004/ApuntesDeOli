@@ -155,6 +155,7 @@ export default function CrudOperaciones() {
       categoryPath="/Fundamentos"
       tags={["CRUD", "HTTP", "REST API", "Bases de Datos"]}
       previousNote={{ label: "¿Qué es NPM?", path: "/Fundamentos/QueEsNPM" }}
+      nextNote={{ label: "Tokens y JWT", path: "/Fundamentos/TokensYJWT" }}
     >
       <div className="callout">
         El concepto de <Term id="crud">CRUD</Term> define las cuatro operaciones fundamentales 
