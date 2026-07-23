@@ -54,7 +54,7 @@ export default function ConvencionesNombres() {
       category="Desarrollo de Software"
       categoryPath="/DesarrolloSoftware"
       tags={["Código Limpio", "Sintaxis", "camelCase", "PascalCase", "snake_case", "Buenas Prácticas"]}
-      previousNote={{ label: "Estilos de Interfaz (UI)", path: "/DesarrolloSoftware/EstilosUI" }}
+      previousNote={{ label: "Paletas de Colores", path: "/DesarrolloSoftware/PaletasColores" }}
       nextNote={{ label: "Seguridad y Escalabilidad", path: "/DesarrolloSoftware/SeguridadYEscalabilidad" }}
     >
       <div className="callout">

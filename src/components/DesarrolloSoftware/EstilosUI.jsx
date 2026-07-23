@@ -261,7 +261,7 @@ export default function EstilosUI() {
       categoryPath="/DesarrolloSoftware"
       tags={["UI/UX", "Diseño", "Estilos", "Glasmorfismo", "Brutalismo", "AI Prompts"]}
       previousNote={{ label: "Optimización de Imágenes", path: "/DesarrolloSoftware/OptimizacionImagenes" }}
-      nextNote={{ label: "Convenciones de Nombres", path: "/DesarrolloSoftware/ConvencionesNombres" }}
+      nextNote={{ label: "Paletas de Colores", path: "/DesarrolloSoftware/PaletasColores" }}
     >
       <div className="callout">
         Conocer los <strong>Estilos de Interfaz de Usuario (UI)</strong> no solo es útil para los diseñadores. 

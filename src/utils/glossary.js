@@ -400,5 +400,17 @@ export const GLOSSARY_TERMS = {
   agente_ia: {
     title: "Agente de IA (AI Agent)",
     def: "Sistema de IA autónomo diseñado para planificar, ejecutar comandos de terminal, editar archivos en el sistema operativo local, y realizar tareas de desarrollo complejas de forma iterativa."
+  },
+  hex_code: {
+    title: "Código Hexadecimal (Hex Code)",
+    def: "Sistema de numeración en base 16 utilizado en diseño web para representar colores mediante seis caracteres precedidos por un hashtag. Ej: #FF0000 para rojo."
+  },
+  regla_60_30_10: {
+    title: "Regla 60-30-10",
+    def: "Regla de diseño que sugiere usar el 60% de la interfaz con un color dominante (fondo), 30% con un color secundario (estructura/tarjetas) y 10% con un color de acento (llamadas a la acción/botones)."
+  },
+  accesibilidad_color: {
+    title: "Accesibilidad del Color (WCAG)",
+    def: "Norma internacional que exige un contraste mínimo (usualmente 4.5:1 para texto normal) entre el color de primer plano y el fondo para garantizar la lectura de personas con limitaciones visuales."
   }
 };
