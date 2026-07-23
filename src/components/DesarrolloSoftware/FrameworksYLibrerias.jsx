@@ -546,8 +546,8 @@ export default function FrameworksYLibrerias() {
       category="Desarrollo de Software"
       categoryPath="/DesarrolloSoftware"
       tags={["React", "Vue", "Express", "FastAPI", "Astro", "NestJS", "Frameworks", "Librerías"]}
-      previousNote={{ label: "Programación Orientada a Objetos", path: "/DesarrolloSoftware/POO" }}
-      nextNote={{ label: "SEO para Desarrollo Web", path: "/DesarrolloSoftware/SEO" }}
+      previousNote={{ label: "Arquitectura de Software", path: "/DesarrolloSoftware/ArquitecturaSoftware" }}
+      nextNote={{ label: "Estructura de Carpetas", path: "/DesarrolloSoftware/EstructuraCarpetas" }}
     >
       <div className="callout">
         Un <strong>framework</strong> es una estructura con reglas y convenciones que dicta cómo debe organizarse tu aplicación.

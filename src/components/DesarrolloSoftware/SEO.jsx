@@ -597,7 +597,7 @@ export default function SEO() {
       category="Desarrollo de Software"
       categoryPath="/DesarrolloSoftware"
       tags={["SEO", "Meta Tags", "Google", "Open Graph", "Core Web Vitals", "Posicionamiento"]}
-      previousNote={{ label: "Frameworks y Librerías", path: "/DesarrolloSoftware/FrameworksYLibrerias" }}
+      previousNote={{ label: "Estructura de Carpetas", path: "/DesarrolloSoftware/EstructuraCarpetas" }}
       nextNote={{ label: "Optimización de Imágenes", path: "/DesarrolloSoftware/OptimizacionImagenes" }}
     >
       <div className="callout">

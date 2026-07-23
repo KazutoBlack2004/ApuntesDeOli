@@ -412,5 +412,21 @@ export const GLOSSARY_TERMS = {
   accesibilidad_color: {
     title: "Accesibilidad del Color (WCAG)",
     def: "Norma internacional que exige un contraste mínimo (usualmente 4.5:1 para texto normal) entre el color de primer plano y el fondo para garantizar la lectura de personas con limitaciones visuales."
+  },
+  monolito: {
+    title: "Monolito (Monolith)",
+    def: "Patrón arquitectónico donde todo el sistema de software (frontend, backend, base de datos, lógica de negocio) está unificado en una sola unidad de ejecución y despliegue."
+  },
+  microservicios: {
+    title: "Microservicios (Microservices)",
+    def: "Enfoque arquitectónico que descompone una aplicación grande en un conjunto de servicios independientes y pequeños que se comunican entre sí mediante protocolos ligeros (HTTP/APIs, colas de mensajes)."
+  },
+  monolito_modular: {
+    title: "Monolito Modular (Modular Monolith)",
+    def: "Arquitectura que unifica el código en un solo despliegue (monolito) pero estructurando el código interno en módulos independientes con fronteras estrictas, facilitando la transición futura a microservicios."
+  },
+  arquitectura_software: {
+    title: "Arquitectura de Software",
+    def: "Diseño estructural de alto nivel de un sistema de software que define sus componentes principales, cómo interactúan entre sí y las directrices técnicas del proyecto."
   }
 };

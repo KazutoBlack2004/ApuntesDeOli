@@ -165,7 +165,7 @@ export default function POO() {
       categoryPath="/DesarrolloSoftware"
       tags={["POO", "Clases", "Objetos", "Modificadores de Acceso", "Pilares"]}
       previousNote={{ label: "Git y Convenciones", path: "/DesarrolloSoftware/ConvencionesCommits" }}
-      nextNote={{ label: "Frameworks y Librerías", path: "/DesarrolloSoftware/FrameworksYLibrerias" }}
+      nextNote={{ label: "Arquitectura de Software", path: "/DesarrolloSoftware/ArquitecturaSoftware" }}
     >
       <div className="callout" style={{ borderLeftColor: "#3b82f6", backgroundColor: "rgba(59,130,246,0.06)" }}>
         La <strong>Programación Orientada a Objetos (POO)</strong> es un paradigma de programación que modela los sistemas 

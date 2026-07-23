@@ -80,7 +80,9 @@ export function AppLayout({ children, currentPath = "" }) {
     "/DesarrolloSoftware": [
       { id: "convenciones-commits", label: "Git y Convenciones", path: "/DesarrolloSoftware/ConvencionesCommits" },
       { id: "poo", label: "Programación Orientada a Objetos", path: "/DesarrolloSoftware/POO" },
+      { id: "arquitectura-software", label: "Arquitectura de Software", path: "/DesarrolloSoftware/ArquitecturaSoftware" },
       { id: "frameworks-librerias", label: "Frameworks y Librerías", path: "/DesarrolloSoftware/FrameworksYLibrerias" },
+      { id: "estructura-carpetas", label: "Estructura de Carpetas", path: "/DesarrolloSoftware/EstructuraCarpetas" },
       { id: "seo", label: "SEO para Desarrollo Web", path: "/DesarrolloSoftware/SEO" },
       { id: "optimizacion-imagenes", label: "Optimización de Imágenes", path: "/DesarrolloSoftware/OptimizacionImagenes" },
       { id: "estilos-ui", label: "Estilos de Interfaz (UI)", path: "/DesarrolloSoftware/EstilosUI" },
