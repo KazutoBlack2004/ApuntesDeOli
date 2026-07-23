@@ -344,5 +344,25 @@ export const GLOSSARY_TERMS = {
   ui_espacial: {
     title: "UI Espacial (Spatial UI)",
     def: "Diseño para entornos tridimensionales y de realidad mixta que destaca por capas de vidrio flotantes sensibles a la luz física ambiental y sombras proyectadas ultraprofundas."
+  },
+  camelcase: {
+    title: "camelCase (Caso Camello)",
+    def: "Estilo de escritura donde las palabras se unen sin espacios y cada palabra nueva (excepto la primera) comienza con mayúscula. Ej: totalInvoiceAmount."
+  },
+  pascalcase: {
+    title: "PascalCase (Caso Pascal / CapitalCamelCase)",
+    def: "Estilo donde las palabras se unen sin espacios y todas las palabras (incluyendo la primera) inician con mayúscula. Ej: UserProfileController."
+  },
+  snakecase: {
+    title: "snake_case (Caso Serpiente)",
+    def: "Estilo donde las palabras se escriben en minúsculas separadas por guiones bajos. Ej: created_at, user_id."
+  },
+  kebabcase: {
+    title: "kebab-case (Caso Kebab)",
+    def: "Estilo donde las palabras se escriben en minúsculas separadas por guiones medios. Muy común en URLs y clases CSS. Ej: main-button."
+  },
+  screaming_snakecase: {
+    title: "SCREAMING_SNAKE_CASE",
+    def: "Estilo donde todas las palabras se escriben en mayúsculas separadas por guiones bajos. Utilizado habitualmente para constantes globales. Ej: MAX_RETRY_LIMIT."
   }
 };

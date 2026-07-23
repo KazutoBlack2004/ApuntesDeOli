@@ -64,7 +64,7 @@ export default function Testing() {
       category="Desarrollo de Software"
       categoryPath="/DesarrolloSoftware"
       tags={["Testing", "Jest", "Vitest", "E2E", "Playwright", "TestSprite", "QA"]}
-      previousNote={{ label: "Estilos de Interfaz (UI)", path: "/DesarrolloSoftware/EstilosUI" }}
+      previousNote={{ label: "Convenciones de Nombres", path: "/DesarrolloSoftware/ConvencionesNombres" }}
       icon={Code}
     >
       <div className="callout">
