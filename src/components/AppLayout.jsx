@@ -69,6 +69,7 @@ export function AppLayout({ children, currentPath = "" }) {
   // Example dynamic subtopics based on the active category
   const subTopics = {
     "/Fundamentos": [
+      { id: "entorno-desarrollo", label: "Entorno de Desarrollo", path: "/Fundamentos/EntornoDesarrollo" },
       { id: "unidades-de-informacion", label: "Unidades de información", path: "/Fundamentos/UnidadesDeInformacion" },
       { id: "que-es-una-api", label: "¿Qué es una API?", path: "/Fundamentos/QueEsUnaAPI" },
       { id: "formato-json", label: "Formato JSON", path: "/Fundamentos/FormatoJSON" },

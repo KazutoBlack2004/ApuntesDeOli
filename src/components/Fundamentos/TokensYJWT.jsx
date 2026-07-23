@@ -625,7 +625,7 @@ export default function TokensYJWT() {
                   {validationStep === "failed" && (
                     <span className="inline-flex items-center gap-1 text-rose-400 text-xs font-bold font-sans">
                       <ShieldAlert size={14} />
-                      ❌ Acceso Denegado: Firma Inválida
+                      Acceso Denegado: Firma Inválida
                     </span>
                   )}
                 </div>

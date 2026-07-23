@@ -21,7 +21,7 @@ const SECURITY_TOPICS = {
     problem: "Las IAs suelen codificar conexiones únicas abriéndose y cerrándose por cada petición. Si miles de usuarios entran a la vez, la base de datos supera el límite de procesos activos y colapsa (HTTP 500 / Too many connections).",
     solution: "Usar un 'Pool' de conexiones. Mantiene un grupo de conexiones activas persistentes que se prestan y devuelven dinámicamente, multiplicando por 100 la capacidad de tráfico.",
     aiPrompt: "Configura el backend utilizando un Pool de conexiones (Connection Pool) reutilizable. Asegúrate de configurar límites máximos de conexiones simultáneas y de liberar la conexión del cliente de vuelta al pool tras completar la query.",
-    badCode: `// ❌ CÓDIGO VULNERABLE (Típico de IA)
+    badCode: `// [INSEGURO] CÓDIGO VULNERABLE (Típico de IA)
 const { Client } = require('pg');
 
 app.get('/api/users', async (req, res) => {
@@ -68,7 +68,7 @@ app.get('/api/users', async (req, res) => {
     problem: "Las IAs escriben las credenciales y tokens directamente en el código fuente. Al subir el código a repositorios públicos como GitHub, bots automáticos roban las credenciales en segundos, resultando en robos de bases de datos o facturas millonarias de APIs.",
     solution: "Extraer todos los secretos a un archivo `.env` local, agregarlo al `.gitignore`, y consumir las variables a través del objeto global de entorno del sistema operativo.",
     aiPrompt: "No expongas credenciales o llaves de API de forma hardcodeada. Extrae todos los secretos a variables de entorno consumidas a través de process.env, y crea un archivo .env.example limpio con las claves vacías.",
-    badCode: `// ❌ CÓDIGO VULNERABLE (Típico de IA)
+    badCode: `// [INSEGURO] CÓDIGO VULNERABLE (Típico de IA)
 const express = require('express');
 const stripe = require('stripe')('sk_live_51N8x...LlavePrivadaSecretaDeStripe');
 
@@ -96,7 +96,7 @@ const dbUri = process.env.DATABASE_URL;
     problem: "La IA concatena variables del usuario directamente en la query SQL. Un atacante puede mandar un valor como \`1; DROP TABLE users;\` alterando la query e interceptando o borrando toda la base de datos.",
     solution: "Usar Consultas Preparadas (Prepared Statements) donde los valores del usuario se tratan de forma aislada como strings inertes, y validar el esquema de datos con librerías como Zod.",
     aiPrompt: "Para prevenir inyecciones SQL, usa consultas preparadas parametrizadas en todas las queries de la base de datos. Valida la estructura y tipo de los inputs con un esquema de Zod antes de procesar cualquier dato.",
-    badCode: `// ❌ CÓDIGO VULNERABLE (Típico de IA)
+    badCode: `// [INSEGURO] CÓDIGO VULNERABLE (Típico de IA)
 app.post('/api/login', async (req, res) => {
   const { email, password } = req.body;
   
@@ -137,7 +137,7 @@ app.post('/api/login', async (req, res) => {
     problem: "Para prototipos rápidos, las IAs sugieren deshabilitar las reglas de seguridad de bases de datos serverless (Firebase, Supabase) o habilitar lectura/escritura pública general. Si el vicoder lo despliega así, cualquiera puede borrar las tablas enviando comandos desde el cliente.",
     solution: "Activar RLS (Row Level Security) en PostgreSQL o configurar reglas IAM en Firestore. La base de datos debe validar de forma independiente el token de autenticación del usuario antes de devolver registros.",
     aiPrompt: "Escribe una política de seguridad a nivel de fila (RLS / Row Level Security) para PostgreSQL/Supabase que permita leer/escribir registros en la tabla únicamente si el ID del usuario coincide con el ID de su sesión autenticada (auth.uid()).",
-    badCode: `// ❌ CONFIGURACIÓN VULNERABLE (Típico de IA)
+    badCode: `// [INSEGURO] CONFIGURACIÓN VULNERABLE (Típico de IA)
 -- Habilitar acceso general en Supabase sin RLS
 ALTER TABLE profiles DISABLE ROW LEVEL SECURITY;
 
@@ -170,7 +170,7 @@ WITH CHECK (auth.uid() = id);
     problem: "La IA no limita cuántas veces un usuario puede llamar a un endpoint. Un atacante puede programar un bucle infinito que llame a una ruta pesada (ej: una que invoque OpenAI API a costo del servidor) o realizar ataques de fuerza bruta para adivinar contraseñas.",
     solution: "Implementar un middleware de Rate Limiting que rastree la dirección IP del cliente y bloquee peticiones excesivas (ej: máximo 100 peticiones cada 15 minutos).",
     aiPrompt: "Añade un middleware de limitación de tasa (rate limiting) para evitar abusos y ataques de fuerza bruta. Limita los endpoints críticos de la API a un máximo de 50 peticiones por ventana de 15 minutos por dirección IP.",
-    badCode: `// ❌ CÓDIGO VULNERABLE (Típico de IA)
+    badCode: `// [INSEGURO] CÓDIGO VULNERABLE (Típico de IA)
 app.post('/api/ask-ai', async (req, res) => {
   const { question } = req.body;
   

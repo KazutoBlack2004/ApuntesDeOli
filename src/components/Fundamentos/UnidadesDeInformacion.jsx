@@ -8,6 +8,7 @@ export default function UnidadesDeInformacion() {
       category="Fundamentos"
       categoryPath="/Fundamentos"
       tags={["Bit", "Byte", "Nomenclatura", "Almacenamiento"]}
+      previousNote={{ label: "Entorno de Desarrollo", path: "/Fundamentos/EntornoDesarrollo" }}
       nextNote={{ label: "¿Qué es una API?", path: "/Fundamentos/QueEsUnaAPI" }}
     >
       <div className="callout">

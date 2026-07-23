@@ -384,5 +384,21 @@ export const GLOSSARY_TERMS = {
   rate_limiting: {
     title: "Rate Limiting (Limitador de Tasa)",
     def: "Medida de control que limita el número de solicitudes HTTP que un cliente o dirección IP puede realizar a un servidor en un periodo de tiempo determinado."
+  },
+  editor_codigo: {
+    title: "Editor de Código (Code Editor)",
+    def: "Aplicación ligera para escribir y formatear archivos de código fuente, con funciones de resaltado de sintaxis y autocompletado básico. Ej: VS Code."
+  },
+  ide: {
+    title: "IDE (Integrated Development Environment)",
+    def: "Entorno de Desarrollo Integrado: un programa completo que unifica la edición de código, compilación, depuración (debugging), y pruebas dentro de una sola interfaz. Ej: IntelliJ, Xcode."
+  },
+  mcp: {
+    title: "MCP (Model Context Protocol)",
+    def: "Model Context Protocol: estándar abierto desarrollado por Anthropic que permite a los modelos de lenguaje conectarse de forma segura con herramientas externas, servidores y bases de datos locales."
+  },
+  agente_ia: {
+    title: "Agente de IA (AI Agent)",
+    def: "Sistema de IA autónomo diseñado para planificar, ejecutar comandos de terminal, editar archivos en el sistema operativo local, y realizar tareas de desarrollo complejas de forma iterativa."
   }
 };
