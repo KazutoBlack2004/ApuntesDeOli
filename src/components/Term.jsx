@@ -20,7 +20,7 @@ export default function Term({ id, children }) {
 
   // Si no se encuentra el término en el diccionario, se muestra el texto normal como salvaguarda
   if (!term) {
-    if (process.env.NODE_ENV === "development") {
+    if (import.meta.env.DEV) {
       console.warn(`[Glosario] Término no definido en glossary.js: "${id}"`);
     }
     return <span>{children}</span>;
