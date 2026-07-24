@@ -90,6 +90,7 @@ export function AppLayout({ children, currentPath = "" }) {
       { id: "convenciones-nombres", label: "Convenciones de Nombres", path: "/DesarrolloSoftware/ConvencionesNombres" },
       { id: "seguridad-escalabilidad", label: "Seguridad y Escalabilidad", path: "/DesarrolloSoftware/SeguridadYEscalabilidad" },
       { id: "testing", label: "Testing de Software", path: "/DesarrolloSoftware/Testing" },
+      { id: "busqueda-trabajo", label: "Búsqueda de Trabajo", path: "/DesarrolloSoftware/BusquedaTrabajo" },
     ],
     "/DesarrolloVideoJuegos": [
       { id: "conceptos-unity", label: "Conceptos Unity", path: "/DesarrolloVideoJuegos" },

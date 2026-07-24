@@ -65,6 +65,7 @@ export default function Testing() {
       categoryPath="/DesarrolloSoftware"
       tags={["Testing", "Jest", "Vitest", "E2E", "Playwright", "TestSprite", "QA"]}
       previousNote={{ label: "Seguridad y Escalabilidad", path: "/DesarrolloSoftware/SeguridadYEscalabilidad" }}
+      nextNote={{ label: "Búsqueda de Trabajo", path: "/DesarrolloSoftware/BusquedaTrabajo" }}
       icon={Code}
     >
       <div className="callout">
