@@ -695,7 +695,7 @@ export default function SEO() {
             </tr>
             <tr className="hover:bg-white/[0.01]">
               <td className="px-4 py-3 font-mono text-xs text-yellow-400">og:title / og:description</td>
-              <td className="px-4 py-3 text-white/70 text-xs">Titulo e imagen al compartir en Facebook, LinkedIn, WhatsApp</td>
+              <td className="px-4 py-3 text-white/70 text-xs">Titulo y descripcion al compartir en Facebook, LinkedIn, WhatsApp</td>
               <td className="px-4 py-3 text-white/50 text-xs">Igual que title/desc</td>
             </tr>
             <tr className="hover:bg-white/[0.01]">
@@ -724,6 +724,58 @@ export default function SEO() {
       </p>
 
       <SEOTool />
+
+      <h2>Profundizando en Open Graph y Meta Etiquetas</h2>
+      <p>
+        Las meta etiquetas no solo sirven para el motor de búsqueda, sino que definen cómo se visualiza tu sitio
+        cuando se comparte en redes sociales y plataformas de mensajería (WhatsApp, Telegram, Slack, LinkedIn). Esto
+        es vital para el <strong>CTR Social</strong> (la tasa de clics que obtienes fuera de los buscadores).
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+        <div className="p-5 rounded-xl border border-sky-500/20 bg-sky-500/5">
+          <div className="flex items-center gap-2 mb-3">
+            <Share2 size={16} className="text-sky-400" />
+            <h3 className="text-sm font-bold text-white m-0">¿Qué es el Protocolo Open Graph?</h3>
+          </div>
+          <p className="text-xs text-white/60 leading-relaxed m-0 mb-3">
+            Creado originalmente por Facebook en 2010, Open Graph permite convertir cualquier página web en un objeto rico
+            dentro del gráfico social. Al estructurar tus metadatos con el prefijo <code>og:</code>, le das control total a las
+            redes sociales sobre cómo renderizar una vista previa atractiva (título, descripción, imagen y dominio).
+          </p>
+          <ul className="text-xs text-white/60 space-y-1.5 pl-4 m-0">
+            <li><strong>og:title:</strong> El título del artículo (debe ser conciso e impactante).</li>
+            <li><strong>og:description:</strong> Breve sinopsis del contenido (idealmente sin keywords forzadas).</li>
+            <li><strong>og:url:</strong> La dirección web canónica que actuará como ID único.</li>
+            <li><strong>og:type:</strong> Generalmente <code>website</code> o <code>article</code>.</li>
+          </ul>
+        </div>
+
+        <div className="p-5 rounded-xl border border-purple-500/20 bg-purple-500/5">
+          <div className="flex items-center gap-2 mb-3">
+            <Eye size={16} className="text-purple-400" />
+            <h3 className="text-sm font-bold text-white m-0">La Importancia de og:image</h3>
+          </div>
+          <p className="text-xs text-white/60 leading-relaxed m-0 mb-3">
+            La imagen de vista previa es el elemento visual más influyente al compartir un enlace. Una página sin <code>og:image</code> o con una imagen genérica rota
+            pierde hasta un 80% de clics potenciales en plataformas como WhatsApp o Twitter.
+          </p>
+          <ul className="text-xs text-white/60 space-y-1.5 pl-4 m-0">
+            <li><strong>Resolución Ideal:</strong> <code>1200 x 630 px</code> (relación de aspecto 1.91:1) para previsualizaciones grandes de alta calidad.</li>
+            <li><strong>Formato y Peso:</strong> Formatos modernos como WebP o PNG optimizado. Mantén el archivo por debajo de <code>1 MB</code> (recomendado: &lt; 300 KB).</li>
+            <li><strong>Rutas Absolutas:</strong> Siempre usa una URL absoluta (ej: <code>https://tu-sitio.com/og-image.png</code>). Las redes sociales ignoran rutas relativas.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="p-4 rounded-xl border border-amber-500/15 bg-amber-500/5 flex gap-3 my-4">
+        <AlertTriangle size={16} className="text-amber-400 mt-0.5 shrink-0" />
+        <div className="text-xs text-white/70 leading-relaxed">
+          <strong className="text-amber-400">Error común - Rutas relativas:</strong> Escribir <code>&lt;meta property="og:image" content="/images/preview.png"&gt;</code>
+          es el error más frecuente en producción. Los scrapers de redes sociales no pueden resolver la ruta relativa desde su dominio y no mostrarán la imagen.
+          Asegúrate de que tus meta etiquetas usen siempre la URL absoluta con <code>https://</code>.
+        </div>
+      </div>
 
       <h2>Core Web Vitals: El SEO Tecnico de Performance</h2>
       <p>
